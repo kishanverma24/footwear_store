@@ -1,73 +1,25 @@
 import React from "react";
 import "./flexItem.css";
+import Card from "../card/Card";
+
 function FlexItem() {
+  const arr = [
+    { h6: "hello", p: "hey buddy", url: "/images/nike5.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike6.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike7.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike8.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike9.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike10.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike10.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike10.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike10.png" },
+    { h6: "hello", p: "hey buddy", url: "/images/nike10.png" },
+  ];
   return (
     <div className="main_div">
-
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-
-      <div className="sm_div">
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
-      <div
-        style={{ backgroundImage: "url(/images/nike5.png)" }}
-        className="sm_div"
-      >
-        <h6>hello</h6>
-        <p>Lets Rock!</p>
-      </div>
+      {arr.map((obj, index) => (
+        <Card key={index} backgroundImage={obj.url} title={obj.h6} description={obj.p} />
+      ))}
     </div>
   );
 }
