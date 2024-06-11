@@ -13,10 +13,6 @@ const HeroSection = () => {
           <button>Shop Now </button>
           <button className="secondary-btn">Category</button>
         </div>
-
-        <div className="shopping">
-          <p>Also Available On</p>
-        </div>
       </div>
       <div className="hero-image">
         <img src="/images/nike2.png" alt="hero-image" />

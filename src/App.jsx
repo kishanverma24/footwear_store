@@ -1,12 +1,10 @@
 import "./App.css";
-import HeroSection from "./components/Hero";
-import Navbar from "./components/Navbar";
-
+import FlexItem from "./components/flexItm/FlexItem";
+import Home from "./pages/Home";
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <HeroSection />
+      <Home/>
     </div>
   );
 };

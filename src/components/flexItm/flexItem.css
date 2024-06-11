@@ -1,0 +1,111 @@
+.main_div {
+  margin: 10px;
+  width: 100%;
+  height: 500px;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.sm_div {
+  margin-top: 20px;
+  background-image: url("/images/nike2.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2%;
+  width: 298px;
+  height: 298px;
+  background-color: rgb(0, 255, 213);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sm_div p {
+  margin-bottom: 10px;
+}
+
+/* Media query for screen sizes between 600 and 900 pixels */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .main_div {
+    margin: 10px;
+    width: 100%;
+    height: 40%px;
+    flex-direction: column;
+  }
+  .sm_div {
+    margin: 5px;
+    background-image: url("/images/nike2.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2%;
+    width: 30%;
+    height: 30%;
+    background-color: rgb(0, 255, 213);
+    cursor: pointer;
+  }
+  .sm_div h6 {
+    text-align: center;
+    width: 40%;
+    height: 2%;
+    background-color: #ffffff;
+    border-radius: 5%;
+    padding: 3%;
+  }
+  .sm_div p {
+    margin-bottom: 1%;
+  }
+}
+/* Media query for screen sizes less than 600 pixels */
+@media screen and (max-width: 600px) {
+  .main_div {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sm_div {
+    margin-top: 20px;
+    background-image: url("/images/nike2.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2%;
+    width: 100%; /* Set width to 100% for single component per row */
+    height: auto; /* Set height to auto for dynamic height */
+    background-color: rgb(0, 255, 213);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .sm_div p {
+    margin-bottom: 10px;
+  }
+}
+
+/* Media query for screen sizes larger than 900 pixels */
+@media screen and (min-width: 900px) {
+  .my-div {
+    width: 150px;
+    height: 150px;
+  }
+}
