@@ -41,8 +41,6 @@ nav ul {
   display: flex;
   align-items: center;
   height: calc(100vh - 72px);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 10px;
 }
 .hero-content {
   display: flex;
@@ -67,11 +65,6 @@ nav ul {
 .hero-btn button {
   font-size: 24px;
 }
-.hero-image {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
 .secondary-btn {
   background: transparent;
   color: var(--gray);
@@ -86,3 +79,10 @@ nav ul {
   display: flex;
   gap: 16px;
 }
+
+
+/* .hero-image {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
