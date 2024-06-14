@@ -1,8 +1,8 @@
 import React from "react";
-import "./flexItem.css";
-import Card from "../card/Card";
+import "./product.css";
+import Card from "../card/ProductCard.jsx";
 
-function FlexItem() {
+function ProductItem() {
   const arr = [
     { h6: "hello", p: "hey buddy", url: "/images/nike5.png" },
     { h6: "hello", p: "hey buddy", url: "/images/nike6.png" },
@@ -24,4 +24,4 @@ function FlexItem() {
   );
 }
 
-export default FlexItem;
+export default ProductItem;

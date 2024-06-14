@@ -17,13 +17,16 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#">Men</a>
+
+            <NavLink to="/men">Men</NavLink>
           </li>
           <li>
-            <a href="#">Women</a>
+
+            <NavLink to="/women">Women</NavLink>
           </li>
+         
           <li>
-            <NavLink to="/category">Catagories</NavLink>
+            <NavLink to="/category">Catagory</NavLink>
           </li>
           <li>
             <NavLink to="/about"> About</NavLink>

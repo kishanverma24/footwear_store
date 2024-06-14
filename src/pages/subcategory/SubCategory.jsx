@@ -1,44 +1,45 @@
 import React from "react";
-import "./category.css";
+import "./subCategory.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import CategoryCard from "../../components/categoryCard/CategoryCard.jsx";
 import { NavLink } from "react-router-dom";
-function Category() {
-  const categories = [
+function SubCategory() {
+  const subCategories = [
     {
-      image: "/images/nike13.png",
-      title: "Shoe",
+      image: "/images/nike4.png",
+      title: "Jordhan",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "2",
     },
     {
-      image: "/images/nike14.png",
-      title: "Shocks",
+      image: "/images/nike5.png",
+      title: "Sneakers",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "3",
     },
     {
-      image: "/images/nike11.png",
-      title: "Slippers",
+      image: "/images/nike6.png",
+      title: "Loafers",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "4",
     },
     {
-      image: "/images/nike10.png",
-      title: "Crocks",
+      image: "/images/nike7.png",
+      title: "Casual",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "5",
     },
   ];
+
   return (
     <>
       <Navbar />
       <div>
         <div className="container">
-          {categories.map((category, index) => {
+          {subCategories.map((category, index) => {
             return (
-              <NavLink to={`/category/${category.title}`}>
+              <NavLink to={`/category/${category.title}/brands`}>
                 {" "}
                 <CategoryCard key={index} category={category} />
               </NavLink>
@@ -46,9 +47,9 @@ function Category() {
           })}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
-export default Category;
+export default SubCategory;
