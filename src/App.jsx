@@ -8,6 +8,7 @@ import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
 import SubCategory from "./pages/subcategory/SubCategory";
 import Brands from "./pages/brands/Brands";
+import Product from "./pages/product/Product";
 const App = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/category" element={<Category />} />
           <Route path="/category/:subcategoryName" element={<SubCategory/>}/>
           <Route path="/category/:subcategoryName/brands" element={<Brands/>}/>
+          <Route path="/category/:subcategoryName/brands/product" element={<Product/>}/>
         </Routes>     
       </Router>
     </>

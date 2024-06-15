@@ -2,6 +2,8 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./about.css";
 import React from "react";
+import Brand from "../../components/brand/Brand.jsx";
+
 function About() {
   return (
     <>
@@ -34,7 +36,8 @@ function About() {
           </div>
         </div>
       </section>
-      <section className="blogs">
+      <Brand />
+      {/* <section className="blogs">
         <h1 className="title">
           Our <span>Blogs!</span>
         </h1>
@@ -78,8 +81,8 @@ function About() {
             </a>
           </div>
         </div>
-      </section>
-      <Footer />
+      </section> */}
+      {/* <Footer /> */}
     </>
   );
 }
