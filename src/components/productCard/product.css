@@ -7,10 +7,10 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
+  margin-top: 5rem;
 }
 .sm_div {
   transition: 0.2s linear;
-
   margin-top: 20px;
   background-image: url("/images/nike2.png");
   background-size: cover;

@@ -1,6 +1,5 @@
 import "./brand.css";
 import React from "react";
-
 const Brand = () => {
   return (
     <div className="shop-section">

@@ -28,9 +28,9 @@ const Navbar = () => {
           <li>
             <NavLink to="/category">Catagory</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/about"> About</NavLink>
-          </li>
+          </li> */}
 
           <li>
             <a href="#">Login</a>

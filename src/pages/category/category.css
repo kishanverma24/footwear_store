@@ -1,4 +1,4 @@
-*,
+/* *,
 *::after,
 *::before {
   margin: 0;
@@ -10,7 +10,7 @@ body {
 }
 img {
   width: 100%;
-}
+} */
 
 .container {
   display: grid;
@@ -60,15 +60,7 @@ img {
   background-size: cover;
   background-position: center;
 }
-/* .container .col .card__side--front-1 {
-background-image: url("/images/nike5.png");
-}
-.container .col .card__side--front-2 {
-  background-image: url("/images/nike8.png");
-}
-.container .col .card__side--front-3 {
-  background-image: url("/images/nike6.png");
-} */
+
 .container .col .card__side--front .frame {
   border: solid 2px #f7f7f7;
   box-shadow: 1px 1px 10px rgba(34, 34, 34, 0.2),
