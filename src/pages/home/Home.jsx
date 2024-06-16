@@ -1,23 +1,20 @@
 import React from "react";
-// import ProductItem from "../../components/productCard/Product.jsx";
 import Navbar from "../../components/navbar/Navbar.jsx";
-import Footer from "../../components/footer/Footer.jsx";
 import Hero from "../../components/hero/Hero.jsx";
-import Brand from "../../components/brand/Brand.jsx";
-import ProductItem from "../../components/productCard/Product.jsx";
-import Category from "../category/Category.jsx";
-function Home() {
+import ProductComponent from "../../components/productComponent/ProductComponent.jsx";
+import CategoryComponent from "../../components/categoryComponent/CategoryComponent.jsx";
+import SubCategoryComponent from "../../components/subCategory component/SubCategoryComponent.jsx";
+
+const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
-      <ProductItem />
-      <Category />
-      <Brand />
-
-      {/* <Footer /> */}
-    </div>
+      <ProductComponent />
+      <CategoryComponent />
+      <SubCategoryComponent />
+    </>
   );
-}
+};
 
 export default Home;

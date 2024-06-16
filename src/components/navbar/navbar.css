@@ -6,9 +6,9 @@
   margin: 0;
 }
 
-.html {
+/* .html {
   font-size: 62.5%;
-}
+} */
 
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
@@ -45,6 +45,7 @@
 .logo {
   order: 1;
   font-size: 2.3rem;
+  margin-bottom: 20px;
 }
 .menu-items li {
   list-style: none;
@@ -59,7 +60,8 @@
   transition: color 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.navbar li:hover {
+  cursor: pointer;
   color: #117964;
 }
 

@@ -1,9 +1,7 @@
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/navbar/Navbar.jsx";
 import "./about.css";
 import React from "react";
-import Brand from "../../components/brand/Brand.jsx";
-
+import BlogComponent from "../../components/blogComponent/BlogComponent.jsx"
 function About() {
   return (
     <>
@@ -36,53 +34,7 @@ function About() {
           </div>
         </div>
       </section>
-      <Brand />
-      {/* <section className="blogs">
-        <h1 className="title">
-          Our <span>Blogs!</span>
-        </h1>
-        <div className="box-container">
-          <div className="box">
-            <img src="./images/nike3.png" alt="image of spaceship" />{" "}
-          
-            <h3>Slices of Delight:Exploring The World of Pizza</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.asperiores
-              corporis repudiandae dolorem beatae
-            </p>
-            <a href="#" className="btn">
-              Read more
-            </a>
-          </div>
-
-          <div className="box">
-            <img src="./images/nike4.png" alt="image of spaceship" />{" "}
-          
-            <h3>Slices of Delight:Exploring The World of Pizza</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.asperiores
-              corporis repudiandae dolorem beatae
-            </p>
-            <a href="#" className="btn">
-              Read more
-            </a>
-          </div>
-
-          <div className="box">
-            <img src="./images/nike6.png" alt="image of spaceship" />
-           
-            <h3>Slices of Delight:Exploring The World of Pizza</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.asperiores
-              corporis repudiandae dolorem beatae
-            </p>
-            <a href="#" className="btn">
-              Read more
-            </a>
-          </div>
-        </div>
-      </section> */}
-      {/* <Footer /> */}
+      <BlogComponent />
     </>
   );
 }

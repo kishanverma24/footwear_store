@@ -1,0 +1,56 @@
+.pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2rem;
+  margin: 50px;
+}
+
+.pro-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 10%;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pro-1 {
+  display: flex;
+  background: #e4e6fe;
+  padding: 20px 20px;
+  gap: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.42s;
+}
+
+.pro-1:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pro-text h3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.pro-text h6 {
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.42s;
+}
+
+.pro-text h6:hover {
+  text-decoration: underline;
+}
