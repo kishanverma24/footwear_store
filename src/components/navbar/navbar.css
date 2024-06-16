@@ -5,16 +5,10 @@
   padding: 0;
   margin: 0;
 }
-
-/* .html {
-  font-size: 62.5%;
-} */
-
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
 }
-
 .container1 {
   max-width: 1200px;
   width: 90%;
@@ -61,6 +55,10 @@
 }
 
 .navbar li:hover {
+  cursor: pointer;
+  color: #117964;
+}
+.navbar .li:hover {
   cursor: pointer;
   color: #117964;
 }

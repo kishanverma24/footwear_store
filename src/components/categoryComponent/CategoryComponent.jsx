@@ -1,6 +1,7 @@
 import React from "react";
 import "./categoryComponent.css";
 import CategoryCard from "../../components/categoryCard/CategoryCard.jsx";
+import { NavLink } from "react-router-dom";
 function CategoryComponent() {
   const categories = [
     {
@@ -34,7 +35,11 @@ function CategoryComponent() {
       <div>
         <div className="container">
           {categories.map((category, index) => {
-            return <CategoryCard key={index} category={category} />;
+            return (
+              <NavLink key={index} to={`/category/${category.title.toLowerCase()}`}>
+                <CategoryCard key={index} category={category} />
+              </NavLink>
+            );
           })}
         </div>
       </div>

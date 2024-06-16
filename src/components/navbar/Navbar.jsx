@@ -13,15 +13,32 @@ const Navbar = () => {
           <span className="line line3"></span>
         </div>
         <ul className="menu-items">
-        <li className="li">
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>Men</li>
-          <li>Women</li>
-
-          <li>Catagory</li>
           <li className="li">
-            <NavLink to="/about">About</NavLink>
+            <NavLink className="li" to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+          <NavLink className="li" to="/men">
+            Men
+            </NavLink>
+            </li>
+          <li>
+          <NavLink className="li" to="/women">
+            Women
+            </NavLink>
+            </li>
+
+          <li>
+            <NavLink className="li" to="/category">
+              Catagory
+            </NavLink>
+          </li>
+
+          <li className="li">
+            <NavLink className="li" to="/about">
+              About
+            </NavLink>
           </li>
 
           <li>Login</li>

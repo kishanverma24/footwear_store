@@ -1,8 +1,10 @@
 import React from "react";
 import "./brandComponent.css";
 import BrandCard from "../brandCard/BrandCard";
-
+import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const BrandComponent = () => {
+  const { category, subcategory } = useParams();
   const logos = [
     { url: "/logo/Bata_logo.png", name: "Bata" },
     { url: "/logo/Beckett-Simonon_logo.png", name: "Beckett-Simonon" },
@@ -31,8 +33,12 @@ const BrandComponent = () => {
   return (
     <section className="simple-pro">
       <div className="pro">
-        {logos.map((logo,index) => (
-        <BrandCard key={index} logo={logo}/>
+        {logos.map((logo, index) => (
+          <NavLink key={index}
+            to={`/category/${category}/${subcategory}/${logo.name}`}
+          >
+            <BrandCard key={index} logo={logo} />
+          </NavLink>
         ))}
       </div>
     </section>
