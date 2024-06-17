@@ -16,8 +16,8 @@ const ProductCard = ({ backgroundImage, title, description }) => {
           padding: "5px",
         }}
       >
-        <h4 >Name:Jordhan</h4>
-        <h4>Price:500</h4>
+        <h4 style={{color:"black"}}>Name:Jordhan</h4>
+        <h4 style={{color:"black"}}>Price:500</h4>
       </div>
     </div>
   );

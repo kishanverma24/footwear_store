@@ -25,7 +25,7 @@
   height: 298px;
   background-color: rgb(0, 255, 213);
   cursor: pointer;
-  box-shadow: rgba(210, 26, 26, 0.463) 0px 2px 4px;
+  box-shadow: rgba(26, 152, 210, 0.463) 0px 2px 4px;
   border-radius: 50%;
 }
 .smm_div:hover {

@@ -1,8 +1,9 @@
 import React from "react";
 import "./productComponent.css";
 import ProductCard from "../productCard/ProductCard.jsx";
+import { NavLink } from "react-router-dom";
 
-function ProductItem() {
+function ProductComponent() {
   const arr = [
     { url: "/images/nike5.png" },
     { url: "/images/nike6.png" },
@@ -18,15 +19,17 @@ function ProductItem() {
   return (
     <div className="main_div">
       {arr.map((obj, index) => (
-        <ProductCard
-          key={index}
-          backgroundImage={obj.url}
-          title={obj.h6}
-          description={obj.p}
-        />
+        <NavLink to={`/productdetail`}>
+          <ProductCard
+            key={index}
+            backgroundImage={obj.url}
+            title={obj.h6}
+            description={obj.p}
+          />
+        </NavLink>
       ))}
     </div>
   );
 }
 
-export default ProductItem;
+export default ProductComponent;

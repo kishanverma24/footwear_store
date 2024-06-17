@@ -1,7 +1,7 @@
 import React from "react";
 import "./blogPage.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 const BlogPage = () => {
   const { brandname } = useParams();
   console.log(brandname);
@@ -58,6 +58,9 @@ const BlogPage = () => {
               aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
               eos qui ratione voluptatem sequi nesciunt.
             </p>
+            <NavLink to={"/products"}>
+              <p className="p_link">Explore Products!</p>
+            </NavLink>
           </div>
         </div>
       </div>
