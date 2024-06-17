@@ -9,8 +9,7 @@ import Brands from "./pages/brands/Brands";
 import Products from "./pages/products/Products";
 import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
-// import Men from "./pages/men/Men";
-// import Women from "./pages/women/Women";
+import BlogPage from "./pages/blogPage/BlogPage.jsx";
 const App = () => {
   return (
     <>
@@ -22,11 +21,9 @@ const App = () => {
           <Route path="/women" element={<Women />} />
           <Route path="/category" element={<Category />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/blog/:brandname" element={<BlogPage />} />
           <Route path="/category/:category" element={<SubCategory />} />
-          <Route
-            path="/category/:category/:subcategory"
-            element={<Brands />}
-          />
+          <Route path="/category/:category/:subcategory" element={<Brands />} />
           <Route
             path="/category/:category/:subcategory/:brand"
             element={<Products />}

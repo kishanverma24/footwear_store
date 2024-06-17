@@ -1,13 +1,12 @@
 import React from "react";
-
-const BlogCard = ({ value }) => {
+const BlogCard = ({ brand }) => {
   return (
     <div className="box1 box">
       <div className="box-content">
-        <h2>BrandName</h2>
+        <h2 style={{ color: "black", fontWeight: "bolder" }}>{brand.name}</h2>
         <div
           className="box-img"
-          style={{ backgroundImage: `url(${value})` }}
+          style={{ backgroundImage: `url(${brand.url})` }}
         ></div>
 
         <p>Explore Blog</p>

@@ -1,7 +1,7 @@
 import Navbar from "../../components/navbar/Navbar.jsx";
 import "./about.css";
 import React from "react";
-import BlogComponent from "../../components/blogComponent/BlogComponent.jsx"
+import BlogComponent from "../../components/blogComponent/BlogComponent.jsx";
 function About() {
   return (
     <>
@@ -34,6 +34,7 @@ function About() {
           </div>
         </div>
       </section>
+      <h5 className="brandParteners">Brand Partners</h5>
       <BlogComponent />
     </>
   );

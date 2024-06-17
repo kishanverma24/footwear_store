@@ -7,7 +7,7 @@ const SubCategoryCard = ({ backgroundImage, title }) => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
         className="smm_div"
       >
-        <h6 >{title}</h6>
+        <h6 style={{color:"black"}} >{title}</h6>
       </div>
     </div>
   );

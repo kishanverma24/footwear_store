@@ -1,34 +1,37 @@
-/**Shop Section**/
-.blog-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #e2e7e6;
-    margin: 20px;
-    padding: 45px;
+.blog-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #e2e7e6;
+  margin: 20px;
+  padding: 45px;
 }
-.box{
-    height: 410px;
-    width: 400px;
-    background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.box {
+  height: 410px;
+  width: 400px;
+  background-color: white;
+  padding: 20px 0px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.box-img{
-    height: 300px;
-    background-size: cover;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.box-img {
+  height: 300px;
+  background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.box-content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.box-content {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.box-content p{
-    color:#007185 ;
-    margin-bottom: 10px;
-    cursor: pointer;
-
+.box-content p {
+  color: #007185;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.box p:hover {
+  text-decoration: underline;
 }

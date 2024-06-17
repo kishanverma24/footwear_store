@@ -17,7 +17,9 @@ const CategoryCard = ({ category }) => {
           style={{ backgroundImage: `url(${category.image})` }}
         >
           <div className="frame">
-            <p>{category.desc}</p>
+            <p style={{ color: "black", fontWeight: "bolder" }}>
+              {category.desc}
+            </p>
           </div>
         </div>
       </div>

@@ -1,0 +1,71 @@
+.blog {
+  margin: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+.banner {
+  height: 400px;
+  background-image: url("/logo/Brooks_logo.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.content {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.blog-post p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .blog-post h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .blog-post h2 {
+    font-size: 20px;
+  }
+}
