@@ -11,12 +11,16 @@ import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
 import BlogPage from "./pages/blogPage/BlogPage.jsx";
 import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
+import RegisterForm from "./pages/registerForm/RegisterForm.jsx";
+import LoginForm from "./pages/loginForm/LoginForm.jsx";
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
           <Route path="/about" element={<About />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />

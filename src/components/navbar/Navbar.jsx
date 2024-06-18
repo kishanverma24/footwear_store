@@ -19,15 +19,15 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-          <NavLink className="li" to="/men">
-            Men
+            <NavLink className="li" to="/men">
+              Men
             </NavLink>
-            </li>
+          </li>
           <li>
-          <NavLink className="li" to="/women">
-            Women
+            <NavLink className="li" to="/women">
+              Women
             </NavLink>
-            </li>
+          </li>
 
           <li>
             <NavLink className="li" to="/category">
@@ -41,7 +41,9 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li>Login</li>
+          <li className="li">
+            <NavLink to="/login">Login</NavLink>
+          </li>
         </ul>
         <h1 className="logo">Footwearers</h1>
       </div>
