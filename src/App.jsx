@@ -13,12 +13,15 @@ import BlogPage from "./pages/blogPage/BlogPage.jsx";
 import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
 import RegisterForm from "./pages/registerForm/RegisterForm.jsx";
 import LoginForm from "./pages/loginForm/LoginForm.jsx";
+import ShoppingCart from "./components/shoppingCart/ShoppingCart.jsx";
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
+
           <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/about" element={<About />} />

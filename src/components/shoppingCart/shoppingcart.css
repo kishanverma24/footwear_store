@@ -1,0 +1,105 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.shoppingCart {
+  width: 80%;
+  margin: 60px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.columnLabels {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.columnLabels label {
+  flex: 1;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.productImage img {
+  width: 100px;
+  height: auto;
+}
+
+.productDetails {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.productTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  color: #777;
+  font-size: 14px;
+}
+
+.productPrice,
+.productQuantity,
+.productRemoval,
+.productLinePrice {
+  flex: 1;
+  text-align: center;
+}
+
+.productQuantity input {
+  width: 40px;
+  text-align: center;
+}
+
+.productRemoval button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.totals {
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.totalsItem {
+  margin-bottom: 10px;
+}
+
+.totalsItem label {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.totalsItemTotal {
+  font-size: 20px;
+  color: #333;
+}
