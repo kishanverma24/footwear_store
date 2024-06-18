@@ -1,7 +1,7 @@
 import React from "react";
 const BlogCard = ({ brand }) => {
   return (
-    <div className="box1 box">
+    <div className="box">
       <div className="box-content">
         <h2 style={{ color: "black", fontWeight: "bolder" }}>{brand.name}</h2>
         <div

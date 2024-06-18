@@ -5,7 +5,7 @@ const ProductDetails = () => {
   return (
     <>
     <Navbar/>
-    <section className="about">
+    <section className="productdetails">
       <div className="row">
         <div className="content">
           <div className="image" style={{ textAlign: "center" }}>
