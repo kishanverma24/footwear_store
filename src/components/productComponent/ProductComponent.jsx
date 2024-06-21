@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function ProductComponent() {
   const arr = [
-    { url: "/images/nike5.png" },
+    { url: "/images/nike5.png",name:"Jordhan",price:"5000" },
     { url: "/images/nike6.png" },
     { url: "/images/nike7.png" },
     { url: "/images/nike8.png" },
@@ -23,8 +23,6 @@ function ProductComponent() {
           <ProductCard
             key={index}
             backgroundImage={obj.url}
-            title={obj.h6}
-            description={obj.p}
           />
         </NavLink>
       ))}

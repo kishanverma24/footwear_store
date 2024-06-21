@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #e2e7e6;
-  margin: 20px;
+  margin-top: 25px;
   padding: 45px;
+  gap: 15px;
 }
 .box {
   height: 410px;

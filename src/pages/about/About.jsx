@@ -13,7 +13,7 @@ function About() {
           </div>
           <div className="content">
             <h3>
-              Welcome to our <span>Footwear</span> Store
+              Welcome to <span>Footwear</span> Store
             </h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem

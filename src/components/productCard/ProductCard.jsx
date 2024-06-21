@@ -1,6 +1,8 @@
 import React from "react";
 
-const ProductCard = ({ backgroundImage, title, description }) => {
+const ProductCard = ({ backgroundImage }) => {
+  const name = "Honney";
+  const price = "5000";
   return (
     <div>
       <div
@@ -16,8 +18,8 @@ const ProductCard = ({ backgroundImage, title, description }) => {
           padding: "5px",
         }}
       >
-        <h4 style={{color:"black"}}>Name:Jordhan</h4>
-        <h4 style={{color:"black"}}>Price:500</h4>
+        <h4 style={{color:"black"}}>Name: {name}</h4>
+        <h4 style={{color:"black"}}>Price: {price}</h4>
       </div>
     </div>
   );

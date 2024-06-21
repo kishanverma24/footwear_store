@@ -6,7 +6,7 @@ const RegisterForm = () => {
     <div className="loginform">
       <div className="container">
         <form id="form" className="form">
-          <h1>Login Form! FootWear</h1>
+          <h1>FootWear Login Form!</h1>
           <div className="form-control">
             <label for="email">Email</label>
             <input type="text" id="email" placeholder="Enter email" />

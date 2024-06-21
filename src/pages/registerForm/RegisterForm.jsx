@@ -6,7 +6,7 @@ const RegisterForm = () => {
     <div className="registerform">
       <div className="container">
         <form id="form" className="form">
-          <h1>Register Form! FootWear</h1>
+          <h1>FootWear Register Form!</h1>
           <div className="form-control">
             <label for="full name">Full Name</label>
             <input type="text" id="fullname" placeholder="Enter fullname" />
