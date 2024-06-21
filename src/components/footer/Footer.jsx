@@ -36,22 +36,30 @@ const Footer = () => {
           <h1>Social</h1>
           <ul>
             <li>
-              <img src="public/logo/Bata_logo.png" style={{ width: "32px" }} />
+              <img
+               src="social/facebook.svg"
+                style={{ width: "32px" }} />
             </li>
             <li>
               <img
-                src="public/logo/Converse_logo.png"
-                style={{ width: "32px" }}
+               src="social/instagram.svg"
+               style={{ width: "32px" }}
               />
             </li>
             <li>
-              <img src="public/logo/Crocs_logo.png" style={{ width: "32px" }} />
+              <img 
+               src="social/twitter.svg"
+               style={{ width: "32px" }} />
             </li>
             <li>
-              <img src="public/logo/Hoka_logo.png" style={{ width: "32px" }} />
+              <img 
+               src="social/linkedin.svg"
+               style={{ width: "32px" }} />
             </li>
             <li>
-              <img src="public/logo/Fila_logo.png" style={{ width: "32px" }} />
+              <img
+               src="social/social.svg"
+               style={{ width: "32px" }} />
             </li>
           </ul>
         </div>

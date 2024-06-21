@@ -5,7 +5,7 @@ import ProductComponent from "../../components/productComponent/ProductComponent
 import CategoryComponent from "../../components/categoryComponent/CategoryComponent.jsx";
 import SubCategoryComponent from "../../components/subCategory component/SubCategoryComponent.jsx";
 import Footer from "../../components/footer/Footer.jsx";
-
+import TodayDeals from "../../components/todayDeals/TodayDeals.jsx";
 const Home = () => {
   return (
     <>
@@ -13,6 +13,7 @@ const Home = () => {
       <Hero />
       <ProductComponent />
       <CategoryComponent />
+      <TodayDeals />
       <SubCategoryComponent />
       <Footer />
     </>

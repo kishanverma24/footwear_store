@@ -13,7 +13,7 @@ import BlogPage from "./pages/blogPage/BlogPage.jsx";
 import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
 import RegisterForm from "./pages/registerForm/RegisterForm.jsx";
 import LoginForm from "./pages/loginForm/LoginForm.jsx";
-import ShoppingCart from "./components/shoppingCart/ShoppingCart.jsx";
+import Cart from "./pages/cartPage/Cart.jsx";
 const App = () => {
   return (
     <>
@@ -21,10 +21,10 @@ const App = () => {
         <Routes>
 
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/category" element={<Category />} />
