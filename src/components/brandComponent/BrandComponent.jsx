@@ -34,7 +34,8 @@ const BrandComponent = () => {
     <section className="simple-pro">
       <div className="pro">
         {logos.map((logo, index) => (
-          <NavLink key={index}
+          <NavLink
+            key={index}
             to={`/category/${category}/${subcategory}/${logo.name}`}
           >
             <BrandCard key={index} logo={logo} />

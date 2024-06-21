@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar/Navbar.jsx";
 import "./about.css";
 import React from "react";
 import BlogComponent from "../../components/blogComponent/BlogComponent.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 function About() {
   return (
     <>
@@ -36,6 +37,7 @@ function About() {
       </section>
       <h5 className="brandParteners">Brand Partners</h5>
       <BlogComponent />
+      <Footer />
     </>
   );
 }

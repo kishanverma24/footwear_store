@@ -2,6 +2,7 @@ import React from "react";
 import "./blogPage.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import { NavLink, useParams } from "react-router-dom";
+import Footer from "../../components/footer/Footer.jsx";
 const BlogPage = () => {
   const { brandname } = useParams();
   console.log(brandname);
@@ -64,6 +65,7 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

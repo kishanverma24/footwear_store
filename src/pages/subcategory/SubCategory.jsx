@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import SubCategoryComponent from "../../components/subCategory component/SubCategoryComponent";
-import { useParams } from "react-router-dom";
+import Footer from "../../components/footer/Footer.jsx";
 
 const SubCategory = () => {
- return (
+  return (
     <>
       <Navbar />
       <SubCategoryComponent />
+      <Footer />
     </>
   );
 };
