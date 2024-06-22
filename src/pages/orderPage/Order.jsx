@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./order.css";
-
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 const Order = () => {
   const [products, setProducts] = useState([
     {
@@ -18,7 +19,7 @@ const Order = () => {
       description:
         "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
       price: 12.99,
-      quantity: 1,
+      quantity: 5,
       image: "/images/nike8.png",
     },
     {
@@ -53,33 +54,26 @@ const Order = () => {
 
   return (
     <>
-      <div className="shoppingCart">
-        <h1>Shopping Cart</h1>
-        <div className="columnLabels">
+      <Navbar />
+      <div className="orderPage">
+        <h1>Order Id: 120339399</h1>
+        <div className="orderLabels">
           <label className="productImage">Image</label>
           <label className="productDetails">Product</label>
           <label className="productPrice">Price</label>
           <label className="productQuantity">Quantity</label>
         </div>
         {products.map((product) => (
-          <div className="product" key={product.id}>
+          <div className="ordercomp" key={product.id}>
             <div className="productImage">
               <img src={product.image} alt="Product" />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
-              <p className="productDescription">{product.description}</p>
             </div>
             <div className="productPrice">${product.price.toFixed(2)}</div>
             <div className="productQuantity">
-              <input
-                type="number"
-                value={product.quantity}
-                min="1"
-                onChange={(e) =>
-                  handleQuantityChange(product.id, parseInt(e.target.value))
-                }
-              />
+              <h4>{product.quantity}</h4>
               <p className="multipleprice" style={{ marginTop: "5px" }}>
                 {" "}
                 ${(product.price * product.quantity).toFixed(2)}
@@ -113,10 +107,15 @@ const Order = () => {
               ${total}
             </div>
           </div>
-
-          <button className="checkoutButton">Checkout</button>
+          <div className="totalsItem">
+            <label>Shipping Address:</label>
+            <div className="totalsValue" id="cart-tax">
+            Hajratgant, Lucknow, Uttar Pradesh, India 
+            </div>
+          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./orders.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-
+import { Link } from "react-router-dom";
+Link;
 const Orders = () => {
   const [orders, setOrders] = useState([
     {
@@ -27,10 +28,6 @@ const Orders = () => {
       details: "Delivered on 2024-06-16",
     },
   ]);
-
-  const handleShowDetails = (id) => {
-    alert(orders.find((order) => order.id === id).details);
-  };
 
   return (
     <>
@@ -64,11 +61,8 @@ const Orders = () => {
               <p>{order.status}</p>
             </div>
             <div className="orderDetails">
-              <button
-                className="showDetailsButton"
-                onClick={() => handleShowDetails(order.id)}
-              >
-                Show Details
+              <button className="showDetailsButton">
+                <Link to={"/order"} style={{color:"white"}}>Show Details</Link>
               </button>
             </div>
           </div>
