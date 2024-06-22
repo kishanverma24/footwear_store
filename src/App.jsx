@@ -14,6 +14,9 @@ import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
 import RegisterForm from "./pages/registerForm/RegisterForm.jsx";
 import LoginForm from "./pages/loginForm/LoginForm.jsx";
 import Cart from "./pages/cartPage/Cart.jsx";
+import Profile from "./pages/profilePage/Profile.jsx";
+import Orders from "./pages/ordersPage/Orders.jsx";
+import Order from "./pages/orderPage/Order.jsx";
 const App = () => {
   return (
     <>
@@ -23,7 +26,11 @@ const App = () => {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/category" element={<Category />} />

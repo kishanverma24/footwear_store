@@ -7,7 +7,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.shoppingCart h1 {
   text-align: center;
   font-size: 24px;
   padding-bottom: 20px;
@@ -106,6 +106,9 @@ h1 {
   cursor: pointer;
   font-weight: bold;
 }
+.checkoutButton:hover {
+  background-color: rgba(0, 128, 0, 0.792);
+}
 .removeProduct {
   background-color: crimson;
   font-weight: bold;
@@ -132,6 +135,8 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
   }
   .multipleprice {
     display: none;

@@ -76,9 +76,30 @@ const Navbar = () => {
           </div>
           <div className="sidebar-wrap">
             <div className="sidebar-item">
-              <p>View Profile</p>
+              <p>
+                <NavLink
+                  to="/profile"
+                  style={{
+                    padding: "5px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  View Profile
+                </NavLink>
+              </p>
               <p>Wishlist</p>
-              <p>Orders</p>
+
+              <p>
+                <NavLink
+                  to="/orders"
+                  style={{
+                    padding: "5px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Orders
+                </NavLink>
+              </p>
               <p>
                 {" "}
                 <NavLink

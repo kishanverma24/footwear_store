@@ -1,0 +1,83 @@
+.ordersPage {
+  width: 80%;
+  height: 100vh;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ordersPage h1 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.columnLabels {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.columnLabels label {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.orderId,
+.orderDate,
+.orderPrice,
+.orderStatus,
+.showDetails {
+  text-align: center;
+}
+
+.showDetailsButton {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-left: 50px;
+}
+
+.showDetailsButton:hover {
+  background-color: rgba(0, 128, 0, 0.792);
+}
+.ordertag {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .columnLabels {
+    display: none;
+  }
+  .order {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .showDetailsButton {
+    margin-left: 0px;
+  }
+  .ordertag {
+    display: inline;
+  }
+}

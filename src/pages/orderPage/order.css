@@ -1,0 +1,145 @@
+.shoppingCart {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shoppingCart h1 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .columnLabels {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .columnLabels label {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .productImage img {
+    width: 100px;
+    height: auto;
+  }
+  
+  ._productDetails {
+    padding-left: 20px;
+  }
+  
+  .productTitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .productDescription {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .productPrice,
+  .productQuantity,
+  .productRemoval,
+  .productAdd,
+  .productLinePrice {
+    text-align: center;
+  }
+  
+  .productQuantity input {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .productRemoval button,
+  .productAdd button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .totals {
+    float: right;
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .totalsItem {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .totalsItem label {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .totalsItemTotal {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .checkoutButton {
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .checkoutButton:hover {
+    background-color: rgba(0, 128, 0, 0.792);
+  }
+  .removeProduct {
+    background-color: crimson;
+    font-weight: bold;
+    border: #777;
+    color: black;
+  }
+  .addProduct {
+    background-color: green;
+    font-weight: bold;
+    border: #777;
+  }
+  .removeProduct:hover {
+    background-color: rgba(179, 42, 42, 0.822);
+  }
+  .addProduct:hover {
+    background-color: rgba(0, 128, 0, 0.817);
+  }
+  
+  @media (max-width: 850px) {
+    .columnLabels {
+      display: none;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  
+    }
+    .multipleprice {
+      display: none;
+    }
+  }
+  
