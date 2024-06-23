@@ -17,6 +17,7 @@ import Cart from "./pages/cartPage/Cart.jsx";
 import Profile from "./pages/profilePage/Profile.jsx";
 import Orders from "./pages/ordersPage/Orders.jsx";
 import Order from "./pages/orderPage/Order.jsx";
+import Checkout from "./pages/checkout/Checkout.jsx";
 const App = () => {
   return (
     <>
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/category" element={<Category />} />

@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import "./shoppingcart.css";
+import "./checkout.css";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import { NavLink } from "react-router-dom";
-const ShoppingCart = () => {
+NavLink;
+const Checkout = () => {
+  const [editActive, setEdit] = useState(false);
+  const [address, setAddress] = useState(
+    "Hajratgant, Lucknow, Uttar Pradesh, India"
+  );
+
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -31,7 +39,6 @@ const ShoppingCart = () => {
       image: "/images/nike9.png",
     },
   ]);
-
   const handleQuantityChange = (id, quantity) => {
     setProducts(
       products.map((product) =>
@@ -57,26 +64,27 @@ const ShoppingCart = () => {
   const calculateTotal = (subtotal, tax, shipping) => {
     return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
   };
-  const handleAdd = () => {
-    console.log("hello");
-  };
 
   const subtotal = calculateSubtotal();
   const tax = calculateTax(subtotal);
   const shipping = 15.0;
   const total = calculateTotal(subtotal, tax, shipping);
 
+  const handleInputAddress = (event) => {
+    setAddress(event.target.value);
+  };
+
   return (
     <>
-      <div className="shoppingCart">
-        <h1>Shopping Cart</h1>
+      <Navbar />
+      <div className="checkoutCart">
+        <h1>Checkout Cart</h1>
         <div className="columnLabels">
           <label className="productImage">Image</label>
           <label className="productDetails">Product</label>
           <label className="productPrice">Price</label>
           <label className="productQuantity">Quantity</label>
           <label className="productRemoval">Remove</label>
-          <label className="productAdd">Add to checkout</label>
         </div>
 
         {products.map((product) => (
@@ -111,49 +119,71 @@ const ShoppingCart = () => {
                 Remove
               </button>
             </div>
-            <div className="productAdd">
-              <button
-                className="addProduct"
-                onClick={() => handleAdd(product.id)}
-              >
-                Add to checkout
-              </button>
-            </div>
           </div>
         ))}
 
         <div className=".totals">
           <div className="totalsItem">
-            <label>Subtotal</label>
+            <label>Subtotal :</label>
             <div className="totalsValue" id="cart-subtotal">
-              ${subtotal}
+              Rs. {subtotal}
             </div>
           </div>
           <div className="totalsItem">
-            <label>Tax (5%)</label>
+            <label>Tax (5%) :</label>
             <div className="totalsValue" id="cart-tax">
-              ${tax}
+              Rs. {tax}
             </div>
           </div>
           <div className="totalsItem">
-            <label>Shipping</label>
+            <label>Shipping :</label>
             <div className=".totalsValue" id="cart-shipping">
-              ${shipping.toFixed(2)}
+              Rs.{shipping.toFixed(2)}
             </div>
           </div>
           <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
-            <label>Grand Total</label>
+            <label>Grand Total :</label>
             <div className="totalsValue" id="cart-total">
-              ${total}
+              Rs.{total}
             </div>
           </div>
-          <NavLink to={"/checkout"}>
-            <button className="checkoutButton">Checkout</button>
+          <div className="totalsItem">
+            <label>Shipping Address :</label>
+            <div className="totalsValue" id="cart-tax">
+              {editActive == true ? (
+                <input type="" value={address} onChange={handleInputAddress} />
+              ) : (
+                <p>{address}</p>
+              )}
+            </div>
+            {editActive == true ? (
+              <button
+                className="shippingAddressEditButton"
+                onClick={() => {
+                  setEdit(false);
+                }}
+              >
+                Ok
+              </button>
+            ) : (
+              <button
+                className="shippingAddressEditButton"
+                onClick={() => {
+                  setEdit(true);
+                }}
+              >
+                Edit
+              </button>
+            )}
+          </div>
+          <NavLink to={"/orders"}>
+            <button className="checkoutButton">Place Order</button>
           </NavLink>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default ShoppingCart;
+export default Checkout;
