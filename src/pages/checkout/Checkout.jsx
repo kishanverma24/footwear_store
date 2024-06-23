@@ -9,7 +9,6 @@ const Checkout = () => {
   const [address, setAddress] = useState(
     "Hajratgant, Lucknow, Uttar Pradesh, India"
   );
-
   const [products, setProducts] = useState([
     {
       id: 1,

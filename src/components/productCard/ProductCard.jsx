@@ -1,12 +1,12 @@
 import React from "react";
 
-const ProductCard = ({ backgroundImage }) => {
+const ProductCard = ({ product }) => {
   const name = "Honney";
   const price = "5000";
   return (
     <div>
       <div
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundImage: `url(${product.url})` }}
         className="sm_div"
       >
        
@@ -18,8 +18,8 @@ const ProductCard = ({ backgroundImage }) => {
           padding: "5px",
         }}
       >
-        <h4 style={{color:"black"}}>Name: {name}</h4>
-        <h4 style={{color:"black"}}>Price: {price}</h4>
+        <h4 style={{color:"black"}}>Name: {product.name}</h4>
+        <h4 style={{color:"black"}}>Price: {product.price}</h4>
       </div>
     </div>
   );

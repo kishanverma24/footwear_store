@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./productDetails.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import Footer from "../../components/footer/Footer.jsx";
+import { products } from "../../data/products.js";
+import { useParams } from "react-router-dom";
+import { CartContext } from "../../context/Cart.jsx";
 const ProductDetails = () => {
+  const { productid } = useParams();
+  const [product, setProduct] = useState(null);
+  const { cartItems, setCartItems } = useContext(CartContext);
+  const addCartItem = () => {
+    setCartItems([...cartItems, product]);
+  };
+  useEffect(() => {
+    const foundProduct = products.find(
+      (prod) => prod.productId === parseInt(productid)
+    );
+    if (foundProduct) {
+      setProduct(foundProduct);
+    }
+  }, [productid]);
+
+  if (!product) {
+    return <p>Loading...</p>;
+  }
   return (
     <>
       <Navbar />
@@ -11,37 +32,31 @@ const ProductDetails = () => {
           <div className="content">
             <div className="image" style={{ textAlign: "center" }}>
               <img
-                src="./images/nike8.png"
+                src={product.url}
                 alt="image of spaceship"
                 style={{ width: "50%", display: "block", margin: "0 auto" }}
               />
             </div>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <p>Name: Jordhan</p>
-              <p>Price:5000</p>
+              <p>Name: {product.name}</p>
+              <p>Price: {product.price}</p>
             </div>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <p>Brand Name: Nike </p>
-              <p>Product Id: 2552 </p>
+              <p>Brand Name: {product.brandName}</p>
+              <p>Product Id: {product.productId} </p>
             </div>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <p>isAvailable: Yes! </p>
-              <p>ForMen: Yup! </p>
+              <p>isAvailable: {product.isAvailable} </p>
+              <p>ForMen: {product.forMen}</p>
             </div>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <p>Vendor Name: Harrish </p>
-              <p>Vendor Id : 1000 </p>
+              <p>Vendor Name: {product.vendorName} </p>
+              <p>Vendor Id : {product.vendorId} </p>
             </div>
-            <a href="#" className="btn">
+            <button className="btn" onClick={addCartItem}>
               Add to Cart
-            </a>
-            <p>
-              Description:Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Lorem ipsum dolor sit amet,
-              consectetur adipisicing. Dolore eligendi deserunt doloremque
-              aliquid natus atque!
-            </p>
+            </button>
+            <p>Description: {product.description}</p>
 
             <div className="comments-section">
               <div className="comments-header">

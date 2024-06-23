@@ -1,70 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./shoppingcart.css";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../../context/Cart.jsx";
 const ShoppingCart = () => {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike7.png",
-    },
-    {
-      id: 2,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike8.png",
-    },
-    {
-      id: 3,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike9.png",
-    },
-  ]);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
-  const handleQuantityChange = (id, quantity) => {
-    setProducts(
-      products.map((product) =>
-        product.id === id ? { ...product, quantity: quantity } : product
-      )
-    );
-  };
+  // const [products, setProducts] = useState([
+  //   {
+  //     id: 1,
+  //     name: "Dingo Dog Bones",
+  //     description:
+  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  //     price: 12.99,
+  //     quantity: 1,
+  //     image: "/images/nike7.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Dingo Dog Bones",
+  //     description:
+  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  //     price: 12.99,
+  //     quantity: 1,
+  //     image: "/images/nike8.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Dingo Dog Bones",
+  //     description:
+  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  //     price: 12.99,
+  //     quantity: 1,
+  //     image: "/images/nike9.png",
+  //   },
+  // ]);
 
-  const handleRemove = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
-  };
+  // const handleQuantityChange = (id, quantity) => {
+  //   setProducts(
+  //     cartItems.map((product) =>
+  //       product.id === id ? { ...product, quantity: quantity } : product
+  //     )
+  //   );
+  // };
 
-  const calculateSubtotal = () => {
-    return products
-      .reduce((acc, product) => acc + product.price * product.quantity, 0)
-      .toFixed(2);
-  };
+  // const handleRemove = (id) => {
+  //   setProducts(products.filter((product) => product.id !== id));
+  // };
 
-  const calculateTax = (subtotal) => {
-    return (subtotal * 0.05).toFixed(2);
-  };
+  // const calculateSubtotal = () => {
+  //   return products
+  //     .reduce((acc, product) => acc + product.price * product.quantity, 0)
+  //     .toFixed(2);
+  // };
 
-  const calculateTotal = (subtotal, tax, shipping) => {
-    return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
-  };
-  const handleAdd = () => {
-    console.log("hello");
-  };
+  // const calculateTax = (subtotal) => {
+  // //   return (subtotal * 0.05).toFixed(2);
+  // // };
 
-  const subtotal = calculateSubtotal();
-  const tax = calculateTax(subtotal);
-  const shipping = 15.0;
-  const total = calculateTotal(subtotal, tax, shipping);
+  // const calculateTotal = (subtotal, tax, shipping) => {
+  //   return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
+  // };
+  // const handleAdd = () => {
+  //   console.log("hello");
+  // };
+
+  // const subtotal = calculateSubtotal();
+  // const tax = calculateTax(subtotal);
+  // const shipping = 15.0;
+  // const total = calculateTotal(subtotal, tax, shipping);
 
   return (
     <>
@@ -79,10 +82,10 @@ const ShoppingCart = () => {
           <label className="productAdd">Add to checkout</label>
         </div>
 
-        {products.map((product) => (
+        {cartItems.map((product) => (
           <div className="product" key={product.id}>
             <div className="productImage">
-              <img src={product.image} alt="Product" />
+              <img src={product.url} alt="Product" />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
@@ -94,19 +97,19 @@ const ShoppingCart = () => {
                 type="number"
                 value={product.quantity}
                 min="1"
-                onChange={(e) =>
-                  handleQuantityChange(product.id, parseInt(e.target.value))
-                }
+                // onChange={(e) =>
+                //   handleQuantityChange(product.id, parseInt(e.target.value))
+                // }
               />
               <p className="multipleprice" style={{ marginTop: "5px" }}>
                 {" "}
-                ${(product.price * product.quantity).toFixed(2)}
+                {/* ${(product.price * product.quantity).toFixed(2)} */}
               </p>
             </div>
             <div className="productRemoval">
               <button
                 className="removeProduct"
-                onClick={() => handleRemove(product.id)}
+                // onClick={() => handleRemove(product.id)}
               >
                 Remove
               </button>
@@ -114,7 +117,7 @@ const ShoppingCart = () => {
             <div className="productAdd">
               <button
                 className="addProduct"
-                onClick={() => handleAdd(product.id)}
+                // onClick={() => handleAdd(product.id)}
               >
                 Add to checkout
               </button>
@@ -126,25 +129,25 @@ const ShoppingCart = () => {
           <div className="totalsItem">
             <label>Subtotal</label>
             <div className="totalsValue" id="cart-subtotal">
-              ${subtotal}
+              {/* ${subtotal} */}
             </div>
           </div>
           <div className="totalsItem">
             <label>Tax (5%)</label>
             <div className="totalsValue" id="cart-tax">
-              ${tax}
+              {/* ${tax} */}
             </div>
           </div>
           <div className="totalsItem">
             <label>Shipping</label>
             <div className=".totalsValue" id="cart-shipping">
-              ${shipping.toFixed(2)}
+              {/* ${shipping.toFixed(2)} */}
             </div>
           </div>
           <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
             <label>Grand Total</label>
             <div className="totalsValue" id="cart-total">
-              ${total}
+              {/* ${total} */}
             </div>
           </div>
           <NavLink to={"/checkout"}>
