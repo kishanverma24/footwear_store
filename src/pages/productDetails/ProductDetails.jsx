@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const { cartItems, setCartItems } = useContext(CartContext);
   const addCartItem = () => {
-    setCartItems([...cartItems, product]);
+    setCartItems([...cartItems, { ...product, quantity: 1 }]);
   };
   useEffect(() => {
     const foundProduct = products.find(

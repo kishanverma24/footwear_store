@@ -5,69 +5,38 @@ import { CartContext } from "../../context/Cart.jsx";
 const ShoppingCart = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
 
-  // const [products, setProducts] = useState([
-  //   {
-  //     id: 1,
-  //     name: "Dingo Dog Bones",
-  //     description:
-  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  //     price: 12.99,
-  //     quantity: 1,
-  //     image: "/images/nike7.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Dingo Dog Bones",
-  //     description:
-  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  //     price: 12.99,
-  //     quantity: 1,
-  //     image: "/images/nike8.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Dingo Dog Bones",
-  //     description:
-  //       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  //     price: 12.99,
-  //     quantity: 1,
-  //     image: "/images/nike9.png",
-  //   },
-  // ]);
+  const handleRemove = (productid) => {
+    setCartItems(
+      cartItems.filter((cartItem) => cartItem.productId !== productid)
+    );
+  };
+  const handleQuantityChange = (productId, quantity) => {
+    setCartItems(
+      cartItems.map((cartItem) =>
+        cartItem.productId === productId
+          ? { ...cartItem, quantity: quantity }
+          : cartItem
+      )
+    );
+  };
 
-  // const handleQuantityChange = (id, quantity) => {
-  //   setProducts(
-  //     cartItems.map((product) =>
-  //       product.id === id ? { ...product, quantity: quantity } : product
-  //     )
-  //   );
-  // };
+  const calculateSubtotal = () => {
+    return cartItems
+      .reduce((acc, product) => acc + product.price * product.quantity, 0)
+      .toFixed(2);
+  };
 
-  // const handleRemove = (id) => {
-  //   setProducts(products.filter((product) => product.id !== id));
-  // };
+  const calculateTax = (subtotal) => {
+    return (subtotal * 0.03).toFixed(2);
+  };
 
-  // const calculateSubtotal = () => {
-  //   return products
-  //     .reduce((acc, product) => acc + product.price * product.quantity, 0)
-  //     .toFixed(2);
-  // };
-
-  // const calculateTax = (subtotal) => {
-  // //   return (subtotal * 0.05).toFixed(2);
-  // // };
-
-  // const calculateTotal = (subtotal, tax, shipping) => {
-  //   return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
-  // };
-  // const handleAdd = () => {
-  //   console.log("hello");
-  // };
-
-  // const subtotal = calculateSubtotal();
-  // const tax = calculateTax(subtotal);
-  // const shipping = 15.0;
-  // const total = calculateTotal(subtotal, tax, shipping);
+  const calculateTotal = (subtotal, tax, shipping) => {
+    return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
+  };
+  const subtotal = calculateSubtotal();
+  const tax = calculateTax(subtotal);
+  const shipping = 15.0;
+  const total = calculateTotal(subtotal, tax, shipping);
 
   return (
     <>
@@ -83,7 +52,7 @@ const ShoppingCart = () => {
         </div>
 
         {cartItems.map((product) => (
-          <div className="product" key={product.id}>
+          <div className="product" key={product.productId}>
             <div className="productImage">
               <img src={product.url} alt="Product" />
             </div>
@@ -97,9 +66,12 @@ const ShoppingCart = () => {
                 type="number"
                 value={product.quantity}
                 min="1"
-                // onChange={(e) =>
-                //   handleQuantityChange(product.id, parseInt(e.target.value))
-                // }
+                onChange={(e) =>
+                  handleQuantityChange(
+                    product.productId,
+                    parseInt(e.target.value)
+                  )
+                }
               />
               <p className="multipleprice" style={{ marginTop: "5px" }}>
                 {" "}
@@ -109,7 +81,7 @@ const ShoppingCart = () => {
             <div className="productRemoval">
               <button
                 className="removeProduct"
-                // onClick={() => handleRemove(product.id)}
+                onClick={() => handleRemove(product.productId)}
               >
                 Remove
               </button>
@@ -124,36 +96,49 @@ const ShoppingCart = () => {
             </div>
           </div>
         ))}
-
-        <div className=".totals">
-          <div className="totalsItem">
-            <label>Subtotal</label>
-            <div className="totalsValue" id="cart-subtotal">
-              {/* ${subtotal} */}
+        {total > 15 ? (
+          <div className=".totals">
+            <div className="totalsItem">
+              <label>Subtotal</label>
+              <div className="totalsValue" id="cart-subtotal">
+                ${subtotal}
+              </div>
             </div>
-          </div>
-          <div className="totalsItem">
-            <label>Tax (5%)</label>
-            <div className="totalsValue" id="cart-tax">
-              {/* ${tax} */}
+            <div className="totalsItem">
+              <label>Tax (3%): </label>
+              <div className="totalsValue" id="cart-tax">
+                ${tax}
+              </div>
             </div>
-          </div>
-          <div className="totalsItem">
-            <label>Shipping</label>
-            <div className=".totalsValue" id="cart-shipping">
-              {/* ${shipping.toFixed(2)} */}
+            <div className="totalsItem">
+              <label>Shipping: </label>
+              <div className=".totalsValue" id="cart-shipping">
+                {total > 15 ? shipping : ""}
+              </div>
             </div>
-          </div>
-          <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
-            <label>Grand Total</label>
-            <div className="totalsValue" id="cart-total">
-              {/* ${total} */}
+            <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
+              <label>Grand Total</label>
+              <div className="totalsValue" id="cart-total">
+                {total > 15 ? total : ""}
+              </div>
             </div>
+            <NavLink to={"/checkout"}>
+              <button className="checkoutButton">Checkout</button>
+            </NavLink>
           </div>
-          <NavLink to={"/checkout"}>
-            <button className="checkoutButton">Checkout</button>
-          </NavLink>
-        </div>
+        ) : (
+          <div
+            className="productNotFound"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "20vh",
+            }}
+          >
+            <h3>"Please add items to Cart"</h3>
+          </div>
+        )}
       </div>
     </>
   );
