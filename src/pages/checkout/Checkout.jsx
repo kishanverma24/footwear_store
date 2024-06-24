@@ -73,7 +73,7 @@ const Checkout = () => {
       <Navbar />
       <div className="checkoutCart">
         <h1>Checkout Cart</h1>
-        <div className="columnLabels">
+        <div className="checkoutCartColumnLabels">
           <label className="productImage">Image</label>
           <label className="productDetails">Product</label>
           <label className="productPrice">Price</label>
@@ -82,9 +82,13 @@ const Checkout = () => {
         </div>
 
         {checkoutItem.map((product) => (
-          <div className="product" key={product.productId}>
-            <div className="productImage">
-              <img style={{marginLeft:"15px"}} src={product.url} alt="Product" />
+          <div className="checkoutCartProduct" key={product.productId}>
+            <div className="checkoutCartProductImage">
+              <img
+                style={{ marginLeft: "15px" }}
+                src={product.url}
+                alt="Product"
+              />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
@@ -120,7 +124,7 @@ const Checkout = () => {
         ))}
 
         {total > 15 ? (
-          <div className="totals">
+          <div className=".totals">
             <div className="totalsItem">
               <label>Subtotal</label>
               <div className="totalsValue" id="cart-subtotal">

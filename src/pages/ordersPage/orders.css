@@ -17,7 +17,6 @@
 
 .ordercolumnLabels {
   display: flex;
-  /* grid-template-columns: 1fr 2fr 1fr 1fr 1fr; */
   justify-content: space-evenly;
   align-items: center;
   padding: 10px 0;
@@ -75,6 +74,11 @@
 @media (max-width: 850px) {
   .ordercolumnLabels {
     display: none;
+  }
+  .ordersPage {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
   }
   .order {
     display: flex;

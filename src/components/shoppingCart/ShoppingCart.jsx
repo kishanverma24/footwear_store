@@ -1,18 +1,29 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./shoppingcart.css";
 import { NavLink } from "react-router-dom";
 import { CartContext, CheckoutContext } from "../../context/Cart.jsx";
+
 const ShoppingCart = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
   const { checkoutItem, setCheckoutItem } = useContext(CheckoutContext);
+
   const handleAddToCheckout = (product) => {
-    setCheckoutItem([...checkoutItem, product]);
+    const isProductInCheckout = checkoutItem.some(
+      (item) => item.productId === product.productId
+    );
+    if (!isProductInCheckout) {
+      setCheckoutItem([...checkoutItem, product]);
+    } else {
+      alert("This product is already in your checkout list.");
+    }
   };
-  const handleRemove = (productid) => {
+
+  const handleRemove = (productId) => {
     setCartItems(
-      cartItems.filter((cartItem) => cartItem.productId !== productid)
+      cartItems.filter((cartItem) => cartItem.productId !== productId)
     );
   };
+
   const handleQuantityChange = (productId, quantity) => {
     setCartItems(
       cartItems.map((cartItem) =>
@@ -36,6 +47,7 @@ const ShoppingCart = () => {
   const calculateTotal = (subtotal, tax, shipping) => {
     return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
   };
+
   const subtotal = calculateSubtotal();
   const tax = calculateTax(subtotal);
   const shipping = 15.0;
@@ -45,7 +57,7 @@ const ShoppingCart = () => {
     <>
       <div className="shoppingCart">
         <h1>Shopping Cart</h1>
-        <div className="columnLabels">
+        <div className="shoppingCartColumnLabels">
           <label className="productImage">Image</label>
           <label className="productDetails">Product</label>
           <label className="productPrice">Price</label>
@@ -55,11 +67,11 @@ const ShoppingCart = () => {
         </div>
 
         {cartItems.map((product) => (
-          <div className="product" key={product.productId}>
-            <div className="productImage">
+          <div className="shppingCartProduct" key={product.productId}>
+            <div className="shppingCartProductImage">
               <img src={product.url} alt="Product" />
             </div>
-            <div className="_productDetails">
+            <div className="_shppingCartProductDetails">
               <div className="productTitle">{product.name}</div>
               <p className="productDescription">{product.description}</p>
             </div>
@@ -122,7 +134,7 @@ const ShoppingCart = () => {
             <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
               <label>Grand Total</label>
               <div className="totalsValue" id="cart-total">
-                {total > 15 ? `Rs. ${total} `: ""}
+                {total > 15 ? `Rs. ${total} ` : ""}
               </div>
             </div>
             <NavLink to={"/checkout"}>

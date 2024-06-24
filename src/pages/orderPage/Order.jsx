@@ -30,8 +30,19 @@ const Order = () => {
   }
 
   const { products, orderDetails } = order;
-  const { subtotal, tax, shippingCharge, total, shippingAddress } = orderDetails;
-
+  const { subtotal, tax, shippingCharge, total, shippingAddress } =
+    orderDetails;
+  // Function to format date as "day/month/year, hours:minutes:seconds"
+  const formatOrderDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    const hours = date.getHours().toString().padStart(2, "0");
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    const seconds = date.getSeconds().toString().padStart(2, "0");
+    return `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+  };
   return (
     <>
       <Navbar />
@@ -75,6 +86,13 @@ const Order = () => {
           <div className="totalsItem totalsItemTotal">
             <label>Grand Total:</label>
             <div className="totalsValue">Rs. {total}</div>
+          </div>
+          <div className="totalsItem">
+            <label>Order Date:</label>
+            <div className="totalsValue">
+              {" "}
+              {formatOrderDate(order.orderDetails.orderDate)}
+            </div>
           </div>
           <div className="totalsItem">
             <label>Shipping Address:</label>
