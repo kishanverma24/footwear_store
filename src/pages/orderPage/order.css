@@ -1,5 +1,6 @@
 .orderPage {
   width: 80%;
+  height: 100vh;
   margin: 20px auto;
   background: #fff;
   padding: 20px;
@@ -16,14 +17,13 @@
 
 .orderLabels {
   display: flex;
-  justify-content: space-around;
-  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 
-.columnLabels label {
+.orderLabels label {
   text-align: center;
   color: #333;
   font-weight: bold;
@@ -31,78 +31,46 @@
 
 .ordercomp {
   display: flex;
-  justify-content: space-around;
-  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.productImage img {
-  width: 100px;
-  height: auto;
-}
-
-._productDetails {
-  padding-left: 20px;
-}
-
-.productTitle {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.productDescription {
-  color: #777;
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.productPrice,
-.productQuantity,
-.productLinePrice {
+.orderId,
+.orderDate,
+.orderPrice,
+.orderStatus,
+.showDetails {
   text-align: center;
 }
-
-.productQuantity input {
-  width: 40px;
-  text-align: center;
+.orderId p {
+  margin-left: 20px;
+}
+.orderPrice p {
+  margin-right: 25px;
 }
 
-.totals {
-  float: right;
-  text-align: right;
-  margin-top: 20px;
-}
-
-.totalsItem {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  display: flex;
-}
-
-.totalsItem label {
-  margin-right: 20px;
-  font-weight: bold;
-}
-
-.totalsItemTotal {
-  font-size: 20px;
-  color: #333;
+.ordertag {
+  display: none;
 }
 
 @media (max-width: 850px) {
-  .columnLabels {
+  .orderLabels {
     display: none;
   }
-  .product {
+  .ordercomp {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
-  .multipleprice {
-    display: none;
+  .ordertag {
+    display: inline;
+  }
+  .orderPrice p {
+    margin-right: 1px;
   }
 }

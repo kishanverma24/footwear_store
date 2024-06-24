@@ -15,22 +15,24 @@
   border-bottom: 1px solid #ccc;
 }
 
-.columnLabels {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+.ordercolumnLabels {
+  display: flex;
+  /* grid-template-columns: 1fr 2fr 1fr 1fr 1fr; */
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 
-.columnLabels label {
+.ordercolumnLabels label {
   text-align: center;
   color: #333;
   font-weight: bold;
 }
 
 .order {
-  display: grid;
+  display: flex;
+  justify-content: space-evenly;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   align-items: center;
   padding: 20px 0;
@@ -46,8 +48,14 @@
 .showDetails {
   text-align: center;
 }
+.orderId p {
+  margin-left: 20px;
+}
+.orderPrice p {
+  margin-right: 25px;
+}
 
-.showDetailsButton {
+.ordershowDetailsButton {
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 3px;
@@ -55,10 +63,9 @@
   color: white;
   font-weight: bold;
   border: none;
-  margin-left: 50px;
 }
 
-.showDetailsButton:hover {
+.ordershowDetailsButton:hover {
   background-color: rgba(0, 128, 0, 0.792);
 }
 .ordertag {
@@ -66,7 +73,7 @@
 }
 
 @media (max-width: 850px) {
-  .columnLabels {
+  .ordercolumnLabels {
     display: none;
   }
   .order {
@@ -74,10 +81,13 @@
     flex-direction: column;
     gap: 10px;
   }
-  .showDetailsButton {
+  .ordershowDetailsButton {
     margin-left: 0px;
   }
   .ordertag {
     display: inline;
+  }
+  .orderPrice p {
+    margin-right: 1px;
   }
 }

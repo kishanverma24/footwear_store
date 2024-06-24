@@ -104,13 +104,13 @@ const ShoppingCart = () => {
             <div className="totalsItem">
               <label>Subtotal</label>
               <div className="totalsValue" id="cart-subtotal">
-                ${subtotal}
+                Rs. {subtotal}
               </div>
             </div>
             <div className="totalsItem">
               <label>Tax (3%): </label>
               <div className="totalsValue" id="cart-tax">
-                ${tax}
+                Rs. {tax}
               </div>
             </div>
             <div className="totalsItem">
@@ -122,7 +122,7 @@ const ShoppingCart = () => {
             <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
               <label>Grand Total</label>
               <div className="totalsValue" id="cart-total">
-                {total > 15 ? total : ""}
+                {total > 15 ? `Rs. ${total} `: ""}
               </div>
             </div>
             <NavLink to={"/checkout"}>

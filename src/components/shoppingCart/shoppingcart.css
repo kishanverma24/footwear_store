@@ -76,27 +76,6 @@
   border-radius: 3px;
 }
 
-.totals {
-  float: right;
-  text-align: right;
-  margin-top: 20px;
-}
-
-.totalsItem {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  display: flex;
-}
-
-.totalsItem label {
-  margin-right: 20px;
-  font-weight: bold;
-}
-
-.totalsItemTotal {
-  font-size: 20px;
-  color: #333;
-}
 
 .checkoutButton {
   background-color: green;

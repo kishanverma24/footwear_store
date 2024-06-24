@@ -76,12 +76,6 @@
   border-radius: 3px;
 }
 
-.totals {
-  float: right;
-  text-align: right;
-  margin-top: 20px;
-}
-
 .totalsItem {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -89,12 +83,12 @@
 }
 
 .totalsItem label {
-  margin-right: 20px;
+  margin-right: 10px;
   font-weight: bold;
 }
 
 .totalsItemTotal {
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -154,8 +148,7 @@
     display: none;
   }
   .shippingAddressEditButton {
-margin-right: 5px;  
-padding: 1px;
-
-}
+    margin-right: 5px;
+    padding: 1px;
+  }
 }

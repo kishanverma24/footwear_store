@@ -66,12 +66,7 @@ const Checkout = () => {
         },
       },
     ]);
-    // console.log(orders);
   };
-  // useEffect to log orders after it updates
-  // useEffect(() => {
-  //   console.log(orders);
-  // }, [orders]);
 
   return (
     <>
@@ -89,7 +84,7 @@ const Checkout = () => {
         {checkoutItem.map((product) => (
           <div className="product" key={product.productId}>
             <div className="productImage">
-              <img src={product.url} alt="Product" />
+              <img style={{marginLeft:"15px"}} src={product.url} alt="Product" />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
@@ -125,29 +120,29 @@ const Checkout = () => {
         ))}
 
         {total > 15 ? (
-          <div className=".totals">
+          <div className="totals">
             <div className="totalsItem">
               <label>Subtotal</label>
               <div className="totalsValue" id="cart-subtotal">
-                ${subtotal}
+                Rs. {subtotal}
               </div>
             </div>
             <div className="totalsItem">
               <label>Tax (3%): </label>
               <div className="totalsValue" id="cart-tax">
-                ${tax}
+                Rs. {tax}
               </div>
             </div>
             <div className="totalsItem">
               <label>Shipping Charge: </label>
               <div className=".totalsValue" id="cart-shipping">
-                {total > 15 ? shippingCharge : ""}
+                {total > 15 ? `Rs. ${shippingCharge} ` : ""}
               </div>
             </div>
             <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
               <label>Grand Total</label>
               <div className="totalsValue" id="cart-total">
-                {total > 15 ? total : ""}
+                {total > 15 ? `Rs. ${total}` : ""}
               </div>
             </div>
             <div className="totalsItem">
@@ -155,6 +150,7 @@ const Checkout = () => {
               <div className="totalsValue" id="cart-tax">
                 {editActive == true ? (
                   <input
+                    style={{ width: "50vw" }}
                     type=""
                     value={address}
                     onChange={handleInputAddress}

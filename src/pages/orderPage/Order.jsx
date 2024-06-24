@@ -1,117 +1,84 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./order.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import { OrdersContext } from "../../context/Cart";
+import { useParams } from "react-router-dom";
+
 const Order = () => {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike7.png",
-    },
-    {
-      id: 2,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 5,
-      image: "/images/nike8.png",
-    },
-    {
-      id: 3,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike9.png",
-    },
-  ]);
+  const { orders } = useContext(OrdersContext);
+  const { orderid } = useParams();
+  const [order, setOrder] = useState(null);
 
-  const calculateSubtotal = () => {
-    return products
-      .reduce((acc, product) => acc + product.price * product.quantity, 0)
-      .toFixed(2);
-  };
+  useEffect(() => {
+    const foundOrder = orders.find(
+      (order) => order.orderDetails.orderId === Number(orderid)
+    );
+    setOrder(foundOrder);
+  }, [orders, orderid]);
 
-  const calculateTax = (subtotal) => {
-    return (subtotal * 0.05).toFixed(2);
-  };
+  if (!order) {
+    return (
+      <>
+        <Navbar />
+        <div className="orderPage">
+          <h1>Loading...</h1>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
-  const calculateTotal = (subtotal, tax, shipping) => {
-    return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
-  };
-
-  const subtotal = calculateSubtotal();
-  const tax = calculateTax(subtotal);
-  const shipping = 15.0;
-  const total = calculateTotal(subtotal, tax, shipping);
+  const { products, orderDetails } = order;
+  const { subtotal, tax, shippingCharge, total, shippingAddress } = orderDetails;
 
   return (
     <>
       <Navbar />
       <div className="orderPage">
-        <h1>Order Id: 120339399</h1>
+        <h1>Order Id: {orderid}</h1>
         <div className="orderLabels">
           <label className="productImage">Image</label>
-          <label className="productDetails">Product</label>
+          <label className="productDetails">Product Name</label>
           <label className="productPrice">Price</label>
           <label className="productQuantity">Quantity</label>
         </div>
         {products.map((product) => (
-          <div className="ordercomp" key={product.id}>
+          <div className="ordercomp" key={product.productId}>
             <div className="productImage">
-              <img src={product.image} alt="Product" />
+              <img src={product.url} alt={product.name} />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
             </div>
-            <div className="productPrice">${product.price.toFixed(2)}</div>
+            <div className="productPrice">Rs. {product.price.toFixed(2)}</div>
             <div className="productQuantity">
               <h4>{product.quantity}</h4>
-              <p className="multipleprice" style={{ marginTop: "5px" }}>
-                {" "}
-                ${(product.price * product.quantity).toFixed(2)}
-              </p>
+              <p className="multipleprice" style={{ marginTop: "5px" }}></p>
             </div>
           </div>
         ))}
 
         <div className=".totals">
           <div className="totalsItem">
-            <label>Subtotal</label>
-            <div className="totalsValue" id="cart-subtotal">
-              ${subtotal}
-            </div>
+            <label>Subtotal:</label>
+            <div className="totalsValue">Rs. {subtotal}</div>
           </div>
           <div className="totalsItem">
-            <label>Tax (5%)</label>
-            <div className="totalsValue" id="cart-tax">
-              ${tax}
-            </div>
+            <label>Tax (3%):</label>
+            <div className="totalsValue">Rs. {tax}</div>
           </div>
           <div className="totalsItem">
-            <label>Shipping</label>
-            <div className=".totalsValue" id="cart-shipping">
-              ${shipping.toFixed(2)}
-            </div>
+            <label>Shipping charge:</label>
+            <div className="totalsValue">Rs. {shippingCharge.toFixed(2)}</div>
           </div>
-          <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
-            <label>Grand Total</label>
-            <div className="totalsValue" id="cart-total">
-              ${total}
-            </div>
+          <div className="totalsItem totalsItemTotal">
+            <label>Grand Total:</label>
+            <div className="totalsValue">Rs. {total}</div>
           </div>
           <div className="totalsItem">
             <label>Shipping Address:</label>
-            <div className="totalsValue" id="cart-tax">
-            Hajratgant, Lucknow, Uttar Pradesh, India 
-            </div>
+            <div className="totalsValue">{shippingAddress}</div>
           </div>
         </div>
       </div>
