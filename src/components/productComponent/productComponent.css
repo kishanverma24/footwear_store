@@ -8,6 +8,8 @@
   justify-content: center;
   gap: 5rem;
   margin-top: 1rem;
+  /* z-index: -1; 
+  position: relative; */
 }
 .sm_div {
   transition: 0.2s linear;
@@ -30,6 +32,7 @@
 .sm_div:hover {
   cursor: pointer;
   transform: scale(0.9);
+  /* z-index: 1; */
 }
 .sm_div p {
   margin-bottom: 10px;

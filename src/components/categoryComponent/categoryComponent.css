@@ -11,9 +11,6 @@
 .container .col .card {
   max-width: 400px;
   height: 100%;
-  position: relative;
-
-  /* give a 3D-positioned element some perspective */
   perspective: 1000px;
 }
 .container .col .card__side {
@@ -22,15 +19,10 @@
   width: 100%;
   padding: 50px;
   box-shadow: 2px 2px 5px rgba(34, 34, 34, 0.5);
-
-  /* set position to absolute to make the card flip */
   position: absolute;
   top: 0;
   left: 0;
-
-  /* hide the back side of the card */
   backface-visibility: hidden;
-
   transition: all 0.8s ease-in-out;
 }
 .container .col .card__side .frame {
@@ -40,7 +32,6 @@
   align-items: center;
 }
 
-/* Styling the front side of the card */
 .container .col .card__side--front {
   filter: contrast(80%);
   background-size: cover;
@@ -60,13 +51,8 @@
   text-shadow: 2px 2px 5px #222;
 }
 
-/* Styling the back side of the card */
 .container .col .card__side--back {
   background-color: #f7f7f7;
-
-  /* Rotate the back side of the card
-  - You can check how it works when you comment out "backface-visibility: hidden;"
-  */
   transform: rotateY(180deg);
 }
 .container .col .card__side--back .frame {

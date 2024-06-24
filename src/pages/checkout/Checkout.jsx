@@ -1,57 +1,35 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./checkout.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { NavLink } from "react-router-dom";
-NavLink;
+import {
+  CartContext,
+  CheckoutContext,
+  OrdersContext,
+} from "../../context/Cart";
 const Checkout = () => {
   const [editActive, setEdit] = useState(false);
   const [address, setAddress] = useState(
     "Hajratgant, Lucknow, Uttar Pradesh, India"
   );
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike7.png",
-    },
-    {
-      id: 2,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike8.png",
-    },
-    {
-      id: 3,
-      name: "Dingo Dog Bones",
-      description:
-        "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-      price: 12.99,
-      quantity: 1,
-      image: "/images/nike9.png",
-    },
-  ]);
+  const { checkoutItem, setCheckoutItem } = useContext(CheckoutContext);
+  const { orders, setOrders } = useContext(OrdersContext);
+
   const handleQuantityChange = (id, quantity) => {
-    setProducts(
-      products.map((product) =>
-        product.id === id ? { ...product, quantity: quantity } : product
+    setCheckoutItem(
+      checkoutItem.map((product) =>
+        product.productId === id ? { ...product, quantity: quantity } : product
       )
     );
   };
 
   const handleRemove = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    setCheckoutItem(checkoutItem.filter((product) => product.productId !== id));
   };
 
   const calculateSubtotal = () => {
-    return products
+    return checkoutItem
       .reduce((acc, product) => acc + product.price * product.quantity, 0)
       .toFixed(2);
   };
@@ -60,18 +38,40 @@ const Checkout = () => {
     return (subtotal * 0.05).toFixed(2);
   };
 
-  const calculateTotal = (subtotal, tax, shipping) => {
-    return (parseFloat(subtotal) + parseFloat(tax) + shipping).toFixed(2);
+  const calculateTotal = (subtotal, tax, shippingCharge) => {
+    return (parseFloat(subtotal) + parseFloat(tax) + shippingCharge).toFixed(2);
   };
 
   const subtotal = calculateSubtotal();
   const tax = calculateTax(subtotal);
-  const shipping = 15.0;
-  const total = calculateTotal(subtotal, tax, shipping);
+  const shippingCharge = 15.0;
+  const total = calculateTotal(subtotal, tax, shippingCharge);
 
   const handleInputAddress = (event) => {
     setAddress(event.target.value);
   };
+  const handlePlaceOrder = () => {
+    setOrders([
+      ...orders,
+      {
+        products: [...checkoutItem],
+        orderDetails: {
+          subtotal,
+          tax,
+          shippingCharge,
+          total,
+          shippingAddress: address,
+          orderId: Math.floor(Math.random() * 900000000) + 100000000,
+          orderDate: new Date(),
+        },
+      },
+    ]);
+    // console.log(orders);
+  };
+  // useEffect to log orders after it updates
+  // useEffect(() => {
+  //   console.log(orders);
+  // }, [orders]);
 
   return (
     <>
@@ -86,10 +86,10 @@ const Checkout = () => {
           <label className="productRemoval">Remove</label>
         </div>
 
-        {products.map((product) => (
-          <div className="product" key={product.id}>
+        {checkoutItem.map((product) => (
+          <div className="product" key={product.productId}>
             <div className="productImage">
-              <img src={product.image} alt="Product" />
+              <img src={product.url} alt="Product" />
             </div>
             <div className="_productDetails">
               <div className="productTitle">{product.name}</div>
@@ -102,18 +102,21 @@ const Checkout = () => {
                 value={product.quantity}
                 min="1"
                 onChange={(e) =>
-                  handleQuantityChange(product.id, parseInt(e.target.value))
+                  handleQuantityChange(
+                    product.productId,
+                    parseInt(e.target.value)
+                  )
                 }
               />
               <p className="multipleprice" style={{ marginTop: "5px" }}>
                 {" "}
-                ${(product.price * product.quantity).toFixed(2)}
+                {(product.price * product.quantity).toFixed(2)}
               </p>
             </div>
             <div className="productRemoval">
               <button
                 className="removeProduct"
-                onClick={() => handleRemove(product.id)}
+                onClick={() => handleRemove(product.productId)}
               >
                 Remove
               </button>
@@ -121,64 +124,84 @@ const Checkout = () => {
           </div>
         ))}
 
-        <div className=".totals">
-          <div className="totalsItem">
-            <label>Subtotal :</label>
-            <div className="totalsValue" id="cart-subtotal">
-              Rs. {subtotal}
+        {total > 15 ? (
+          <div className=".totals">
+            <div className="totalsItem">
+              <label>Subtotal</label>
+              <div className="totalsValue" id="cart-subtotal">
+                ${subtotal}
+              </div>
             </div>
-          </div>
-          <div className="totalsItem">
-            <label>Tax (5%) :</label>
-            <div className="totalsValue" id="cart-tax">
-              Rs. {tax}
+            <div className="totalsItem">
+              <label>Tax (3%): </label>
+              <div className="totalsValue" id="cart-tax">
+                ${tax}
+              </div>
             </div>
-          </div>
-          <div className="totalsItem">
-            <label>Shipping :</label>
-            <div className=".totalsValue" id="cart-shipping">
-              Rs.{shipping.toFixed(2)}
+            <div className="totalsItem">
+              <label>Shipping Charge: </label>
+              <div className=".totalsValue" id="cart-shipping">
+                {total > 15 ? shippingCharge : ""}
+              </div>
             </div>
-          </div>
-          <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
-            <label>Grand Total :</label>
-            <div className="totalsValue" id="cart-total">
-              Rs.{total}
+            <div className={`${"totalsItem"} ${"totalsItemTotal"}`}>
+              <label>Grand Total</label>
+              <div className="totalsValue" id="cart-total">
+                {total > 15 ? total : ""}
+              </div>
             </div>
-          </div>
-          <div className="totalsItem">
-            <label>Shipping Address :</label>
-            <div className="totalsValue" id="cart-tax">
+            <div className="totalsItem">
+              <label>Shipping Address :</label>
+              <div className="totalsValue" id="cart-tax">
+                {editActive == true ? (
+                  <input
+                    type=""
+                    value={address}
+                    onChange={handleInputAddress}
+                  />
+                ) : (
+                  <p>{address}</p>
+                )}
+              </div>
               {editActive == true ? (
-                <input type="" value={address} onChange={handleInputAddress} />
+                <button
+                  className="shippingAddressEditButton"
+                  onClick={() => {
+                    setEdit(false);
+                  }}
+                >
+                  Ok
+                </button>
               ) : (
-                <p>{address}</p>
+                <button
+                  className="shippingAddressEditButton"
+                  onClick={() => {
+                    setEdit(true);
+                  }}
+                >
+                  Edit
+                </button>
               )}
             </div>
-            {editActive == true ? (
-              <button
-                className="shippingAddressEditButton"
-                onClick={() => {
-                  setEdit(false);
-                }}
-              >
-                Ok
+            <NavLink to={"/orders"}>
+              <button className="checkoutButton" onClick={handlePlaceOrder}>
+                Place Order
               </button>
-            ) : (
-              <button
-                className="shippingAddressEditButton"
-                onClick={() => {
-                  setEdit(true);
-                }}
-              >
-                Edit
-              </button>
-            )}
+            </NavLink>
           </div>
-          <NavLink to={"/orders"}>
-            <button className="checkoutButton">Place Order</button>
-          </NavLink>
-        </div>
+        ) : (
+          <div
+            className="productNotFound"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "20vh",
+            }}
+          >
+            <h3>"No items to be Checkout"</h3>
+          </div>
+        )}
       </div>
       <Footer />
     </>

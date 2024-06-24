@@ -1,10 +1,13 @@
 import React, { useState, useContext } from "react";
 import "./shoppingcart.css";
 import { NavLink } from "react-router-dom";
-import { CartContext } from "../../context/Cart.jsx";
+import { CartContext, CheckoutContext } from "../../context/Cart.jsx";
 const ShoppingCart = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
-
+  const { checkoutItem, setCheckoutItem } = useContext(CheckoutContext);
+  const handleAddToCheckout = (product) => {
+    setCheckoutItem([...checkoutItem, product]);
+  };
   const handleRemove = (productid) => {
     setCartItems(
       cartItems.filter((cartItem) => cartItem.productId !== productid)
@@ -75,7 +78,7 @@ const ShoppingCart = () => {
               />
               <p className="multipleprice" style={{ marginTop: "5px" }}>
                 {" "}
-                {/* ${(product.price * product.quantity).toFixed(2)} */}
+                {(product.price * product.quantity).toFixed(2)}
               </p>
             </div>
             <div className="productRemoval">
@@ -89,7 +92,7 @@ const ShoppingCart = () => {
             <div className="productAdd">
               <button
                 className="addProduct"
-                // onClick={() => handleAdd(product.id)}
+                onClick={() => handleAddToCheckout(product)}
               >
                 Add to checkout
               </button>

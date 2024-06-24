@@ -3,7 +3,6 @@ import "./orders.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
-Link;
 const Orders = () => {
   const [orders, setOrders] = useState([
     {
@@ -62,7 +61,9 @@ const Orders = () => {
             </div>
             <div className="orderDetails">
               <button className="showDetailsButton">
-                <Link to={"/order"} style={{color:"white"}}>Show Details</Link>
+                <Link to={"/order"} style={{ color: "white" }}>
+                  Show Details
+                </Link>
               </button>
             </div>
           </div>
