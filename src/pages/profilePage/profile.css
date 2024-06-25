@@ -1,7 +1,6 @@
 .profile-container {
   background: linear-gradient(45deg, #b2b5e0, #c5adc5);
   width: 100%;
-  /* margin-top: 10px; */
   padding-top: 5px;
   padding-bottom: 10px;
 }
@@ -13,4 +12,30 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom: 5px solid #8c8fb8;
+}
+.profileCardSubDiv {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 850px) {
+  .profileCard {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .profileCardSubDiv {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+@media (max-width: 550px) {
+  .profileCard {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .profileCardSubDiv {
+    flex-direction: column;
+    gap: 0px;
+  }
 }

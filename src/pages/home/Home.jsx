@@ -7,10 +7,15 @@ import SubCategoryComponent from "../../components/subCategory component/SubCate
 import Footer from "../../components/footer/Footer.jsx";
 import TodayDeals from "../../components/todayDeals/TodayDeals.jsx";
 const Home = () => {
+  const imageUrlDesktop = "./images/hero_section_image.jpg";
+  const imageUrlMobile = "./images/hero_long.jpg";
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero
+        imageUrlDesktop={imageUrlDesktop}
+        imageUrlMobile={imageUrlMobile}
+      />{" "}
       <ProductComponent />
       <CategoryComponent />
       <TodayDeals />

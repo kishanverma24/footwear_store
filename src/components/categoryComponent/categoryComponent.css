@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 10px;
   margin: 5rem;
 }
 .container .col {
@@ -93,6 +93,9 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    margin: 2rem;
+  }
   .container .col {
     width: 350px;
   }
