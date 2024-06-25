@@ -32,7 +32,7 @@ const Footer = () => {
             <li>Email templates</li>
           </ul>
         </div>
-        <div className="col social">
+        {/* <div className="col social">
           <h1>Social</h1>
           <ul>
             <li>
@@ -62,7 +62,7 @@ const Footer = () => {
                style={{ width: "32px" }} />
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="clearfix"></div>
       </div>
     </div>
