@@ -23,36 +23,38 @@ export const products = [
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
+
   {
-    name: "Jordhan",
+    name: "Addi",
 
-    url: "/images/nike5.png",
+    url: "/images/adidas6.avif",
 
-    price: 5000,
+    price: 500,
 
-    brandName: "Nike",
+    brandName: "Adidas",
 
     productId: 2552,
 
     isAvailable: "Yes!",
 
-    ForMen: "Yes!",
+    ForMen: "No!",
 
     vendorName: "Harrish",
 
     vendorId: 1000,
 
-    productId: 12202,
+    productId: 12920211,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
+
   {
     name: "Jordhan",
 
     url: "/images/nike7.png",
 
-    price: 5000,
+    price: 5600,
 
     brandName: "Nike",
 
@@ -72,11 +74,35 @@ export const products = [
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
+    name: "Addi",
+
+    url: "/images/adidas4.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
     name: "Jordhan",
 
     url: "/images/nike8.png",
 
-    price: 5000,
+    price: 8200,
 
     brandName: "Nike",
 
@@ -98,11 +124,11 @@ export const products = [
   {
     name: "Jordhan",
 
-    url: "/images/nike9.png",
+    url: "/images/bata8.jpeg",
 
-    price: 5000,
+    price: 2000,
 
-    brandName: "Nike",
+    brandName: "Bata",
 
     productId: 2552,
 
@@ -120,19 +146,43 @@ export const products = [
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
-    name: "Jordhan",
+    name: "Addi",
 
-    url: "/images/nike10.png",
+    url: "/images/adidas8.avif",
 
-    price: 5000,
+    price: 500,
 
-    brandName: "Nike",
+    brandName: "Adidas",
 
     productId: 2552,
 
     isAvailable: "Yes!",
 
-    ForMen: "Yes!",
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Jordhan",
+
+    url: "/images/bata1.jpg",
+
+    price: 4500,
+
+    brandName: "Bata",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
 
     vendorName: "Harrish",
 
@@ -144,13 +194,13 @@ export const products = [
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
-    name: "Jordhan",
+    name: "Sandel",
 
-    url: "/images/nike11.png",
+    url: "/images/bata2.jpeg",
 
-    price: 5000,
+    price: 1000,
 
-    brandName: "Nike",
+    brandName: "Bata",
 
     productId: 2552,
 
@@ -168,13 +218,37 @@ export const products = [
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
+    name: "Addi",
+
+    url: "/images/adidas7.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
     name: "Jordhan",
 
-    url: "/images/nike12.png",
+    url: "/images/bata7.jpeg",
 
-    price: 5000,
+    price: 3000,
 
-    brandName: "Nike",
+    brandName: "Bata",
 
     productId: 2552,
 
@@ -194,11 +268,60 @@ export const products = [
   {
     name: "Jordhan",
 
-    url: "/images/nike13.png",
+    url: "/images/bata3.jpeg",
 
-    price: 5000,
+    price: 3300,
 
-    brandName: "Nike",
+    brandName: "Bata",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "Yes!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12202911,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+
+  {
+    name: "Addi",
+
+    url: "/images/adidas5.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Jordhan",
+
+    url: "/images/bata5.jpeg",
+
+    price: 3300,
+
+    brandName: "Bata",
 
     productId: 2552,
 
@@ -218,11 +341,108 @@ export const products = [
   {
     name: "Jordhan",
 
-    url: "/images/nike14.png",
+    url: "/images/bata4.jpeg",
 
-    price: 5000,
+    price: 500,
 
-    brandName: "Nike",
+    brandName: "Bata",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Addi",
+
+    url: "/images/adidas3.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Addi",
+
+    url: "/images/adidas1.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Addi",
+
+    url: "/images/adidas2.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+
+  {
+    name: "Jordhan",
+
+    url: "/images/bata6.jpeg",
+
+    price: 6000,
+
+    brandName: "Bata",
 
     productId: 2552,
 
@@ -234,7 +454,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 12202,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",

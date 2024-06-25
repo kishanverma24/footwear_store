@@ -7,7 +7,7 @@ const TodayDeals = () => {
 
   const handlePrevClick = () => {
     if (startProduct < 0) {
-      setStartProduct(startProduct+10); // Adjust based on your item width percentage
+      setStartProduct(startProduct+100); // Adjust based on your item width percentage
     }
   };
 

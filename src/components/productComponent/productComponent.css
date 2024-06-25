@@ -25,7 +25,7 @@
   gap: 2%;
   width: 298px;
   height: 298px;
-  background-color: rgb(0, 255, 213);
+  background-color: whitesmoke;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
 }

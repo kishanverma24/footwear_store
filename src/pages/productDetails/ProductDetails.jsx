@@ -65,9 +65,22 @@ const ProductDetails = () => {
               <p>Vendor Name: {product.vendorName} </p>
               <p>Vendor Id : {product.vendorId} </p>
             </div>
-            <button className="btn" onClick={addCartItem}>
-              Add to Cart
-            </button>
+            {cartItems.some((item) => item.productId === product.productId) ? (
+              <button
+                className="btn"
+                style={{ backgroundColor:"rgba(125, 48, 48, 0.811)" }}
+                onClick={() => {
+                  alert("This product is already in your cart.");
+                }}
+              >
+                Already in Cart
+              </button>
+            ) : (
+              <button className="btn" onClick={addCartItem}>
+                Add to Cart
+              </button>
+            )}
+
             <p>Description: {product.description}</p>
 
             <div className="comments-section">

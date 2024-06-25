@@ -23,6 +23,13 @@ const ShoppingCart = () => {
       cartItems.filter((cartItem) => cartItem.productId !== productId)
     );
   };
+  const handleRemoveFromCheckout = (productId) => {
+    setCheckoutItem(
+      checkoutItem.filter(
+        (checkoutItem) => checkoutItem.productId !== productId
+      )
+    );
+  };
 
   const handleQuantityChange = (productId, quantity) => {
     setCartItems(
@@ -102,12 +109,25 @@ const ShoppingCart = () => {
               </button>
             </div>
             <div className="productAdd">
-              <button
-                className="addProduct"
-                onClick={() => handleAddToCheckout(product)}
-              >
-                Add to checkout
-              </button>
+              {checkoutItem.some(
+                (item) => item.productId === product.productId
+              ) ? (
+                <button
+                  className="addProduct"
+                  style={{ backgroundColor: "rgba(125, 48, 48, 0.811)" }}
+                  onClick={() => handleRemoveFromCheckout(product.productId)}
+                >
+                  Remove from checkout
+                </button>
+              ) : (
+                <button
+                  className="addProduct"
+                  onClick={() => handleAddToCheckout(product)}
+                >
+                  Add to checkout
+                </button>
+              )}
+            
             </div>
           </div>
         ))}
