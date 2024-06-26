@@ -17,14 +17,26 @@ function CategoryComponent() {
       id: "3",
     },
     {
-      image: "/images/bata6.jpeg",
+      image: "/images/slippers.jpg",
       title: "Slippers",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "4",
     },
     {
-      image:"/images/bata4.jpeg",
+      image: "/images/crocs.jpg",
       title: "Crocks",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
+      id: "5",
+    },
+    {
+      image: "/images/heels.jpg",
+      title: "High Heels",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
+      id: "5",
+    },
+    {
+      image: "/images/wedges.jpg",
+      title: "Wedges",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio a, aliquid beatae officia neque odit vero corrupti obcaecati corporis nobis sequi necessitatibus? Nisi molestias minus, dolorem quaerat ipsum reprehenderit",
       id: "5",
     },
@@ -36,7 +48,10 @@ function CategoryComponent() {
         <div className="container">
           {categories.map((category, index) => {
             return (
-              <NavLink key={index} to={`/category/${category.title.toLowerCase()}`}>
+              <NavLink
+                key={index}
+                to={`/category/${category.title.toLowerCase()}`}
+              >
                 <CategoryCard key={index} category={category} />
               </NavLink>
             );

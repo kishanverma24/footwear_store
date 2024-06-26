@@ -25,25 +25,25 @@ export const products = [
   },
 
   {
-    name: "Addi",
+    name: "Jordhan",
 
-    url: "/images/adidas6.avif",
+    url: "/images/nike8.png",
 
-    price: 500,
+    price: 8200,
 
-    brandName: "Adidas",
+    brandName: "Nike",
 
     productId: 2552,
 
     isAvailable: "Yes!",
 
-    ForMen: "No!",
+    ForMen: "Yes!",
 
     vendorName: "Harrish",
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 122211,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -74,35 +74,11 @@ export const products = [
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
-    name: "Addi",
+    name: "Johhmy",
 
-    url: "/images/adidas4.avif",
+    url: "/images/nike9.png",
 
-    price: 500,
-
-    brandName: "Adidas",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Jordhan",
-
-    url: "/images/nike8.png",
-
-    price: 8200,
+    price: 5000,
 
     brandName: "Nike",
 
@@ -116,103 +92,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 122211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Jordhan",
-
-    url: "/images/bata8.jpeg",
-
-    price: 2000,
-
-    brandName: "Bata",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "Yes!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 1223211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Addi",
-
-    url: "/images/adidas8.avif",
-
-    price: 500,
-
-    brandName: "Adidas",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Jordhan",
-
-    url: "/images/bata1.jpg",
-
-    price: 4500,
-
-    brandName: "Bata",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 1229911,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Sandel",
-
-    url: "/images/bata2.jpeg",
-
-    price: 1000,
-
-    brandName: "Bata",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "Yes!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 1220291,
+    productId: 122021,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -241,6 +121,104 @@ export const products = [
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
+  {
+    name: "Addi",
+
+    url: "/images/adidas6.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Addi",
+
+    url: "/images/adidas4.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Addi",
+
+    url: "/images/adidas3.avif",
+
+    price: 500,
+
+    brandName: "Adidas",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "No!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 12920211,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+
+  {
+    name: "Sandel",
+
+    url: "/images/bata2.jpeg",
+
+    price: 1000,
+
+    brandName: "Bata",
+
+    productId: 2552,
+
+    isAvailable: "Yes!",
+
+    ForMen: "Yes!",
+
+    vendorName: "Harrish",
+
+    vendorId: 1000,
+
+    productId: 1220291,
+
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+
   {
     name: "Jordhan",
 
@@ -289,173 +267,134 @@ export const products = [
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
-
   {
-    name: "Addi",
-
-    url: "/images/adidas5.avif",
-
-    price: 500,
-
-    brandName: "Adidas",
-
+    name: "Jordhan",
+  
+    url: "/images/bata5.jpeg",
+  
+    brandName: "Bata",
+    price: 3300,
+  
+  
     productId: 2552,
-
+  
     isAvailable: "Yes!",
-
-    ForMen: "No!",
-
+  
+    ForMen: "Yes!",
+  
     vendorName: "Harrish",
-
+  
     vendorId: 1000,
-
-    productId: 12920211,
-
+  
+    productId: 12202911,
+  
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
-    name: "Jordhan",
-
-    url: "/images/bata5.jpeg",
-
+    name: "Burberry",
+  
+    url: "/images/burberry3.webp",
+  
     price: 3300,
 
-    brandName: "Bata",
-
+    brandName: "Burberry",
+  
+    price: 3300,
+  
+  
     productId: 2552,
-
+  
     isAvailable: "Yes!",
-
+  
     ForMen: "Yes!",
-
+  
     vendorName: "Harrish",
-
+  
     vendorId: 1000,
-
+  
     productId: 12202911,
-
+  
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },
   {
-    name: "Jordhan",
+    name: "Burberry",
+  
+    url: "/images/burberry2.webp",
+  
+    price: 3300,
 
-    url: "/images/bata4.jpeg",
-
-    price: 500,
-
-    brandName: "Bata",
-
+    brandName: "Burberry",
+  
+    price: 3300,
+  
+  
     productId: 2552,
-
+  
     isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Addi",
-
-    url: "/images/adidas3.avif",
-
-    price: 500,
-
-    brandName: "Adidas",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Addi",
-
-    url: "/images/adidas1.avif",
-
-    price: 500,
-
-    brandName: "Adidas",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-  {
-    name: "Addi",
-
-    url: "/images/adidas2.avif",
-
-    price: 500,
-
-    brandName: "Adidas",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
-    ForMen: "No!",
-
-    vendorName: "Harrish",
-
-    vendorId: 1000,
-
-    productId: 12920211,
-
-    description:
-      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
-  },
-
-  {
-    name: "Jordhan",
-
-    url: "/images/bata6.jpeg",
-
-    price: 6000,
-
-    brandName: "Bata",
-
-    productId: 2552,
-
-    isAvailable: "Yes!",
-
+  
     ForMen: "Yes!",
-
+  
     vendorName: "Harrish",
-
+  
     vendorId: 1000,
+  
+    productId: 12202911,
+  
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
 
-    productId: 12202,
+  {
+    name: "Burberry",
+  
+    url: "/images/burberry1.webp",
+  
+    price: 3300,
 
+    brandName: "Burberry",
+  
+    price: 3300,
+  
+  
+    productId: 2552,
+  
+    isAvailable: "Yes!",
+  
+    ForMen: "Yes!",
+  
+    vendorName: "Harrish",
+  
+    vendorId: 1000,
+  
+    productId: 12202911,
+  
+    description:
+      "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
+  },
+  {
+    name: "Burberry",
+  
+    url: "/images/burberry4.webp",
+  
+    price: 3300,
+
+    brandName: "Burberry",
+  
+  
+    productId: 2552,
+  
+    isAvailable: "Yes!",
+  
+    ForMen: "Yes!",
+  
+    vendorName: "Harrish",
+  
+    vendorId: 1000,
+  
+    productId: 12202911,
+  
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
   },

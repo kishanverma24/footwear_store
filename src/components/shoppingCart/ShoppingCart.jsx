@@ -127,7 +127,6 @@ const ShoppingCart = () => {
                   Add to checkout
                 </button>
               )}
-            
             </div>
           </div>
         ))}
