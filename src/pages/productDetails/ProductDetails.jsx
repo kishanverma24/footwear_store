@@ -49,26 +49,41 @@ const ProductDetails = () => {
                 style={{ width: "50%", display: "block", margin: "0 auto" }}
               />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div
+              className="productdetailsSubbies"
+              style={{ display: "flex", justifyContent: "space-evenly" }}
+            >
               <p>Name: {product.name}</p>
+            </div>
+            <div
+              className="productdetailsSubbies"
+              style={{ display: "flex", justifyContent: "space-evenly" }}
+            >
               <p>Price: {product.price}</p>
+
+              <p>Brand name: {product.brandName}</p>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <p>Brand Name: {product.brandName}</p>
-              <p>Product Id: {product.productId} </p>
-            </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div
+              className="productdetailsSubbies"
+              style={{ display: "flex", justifyContent: "space-evenly" }}
+            >
               <p>isAvailable: {product.isAvailable} </p>
-              <p>ForMen: {product.forMen}</p>
+              {/* <p>ForMen: {product.forMen}</p> */}
             </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div
+              className="productdetailsSubbies"
+              style={{ display: "flex", justifyContent: "space-evenly" }}
+            >
               <p>Vendor Name: {product.vendorName} </p>
               <p>Vendor Id : {product.vendorId} </p>
+              <p>Product Id: {product.productId} </p>
             </div>
+            <p className="productdesc">Description: {product.description}</p>
+
             {cartItems.some((item) => item.productId === product.productId) ? (
               <button
                 className="btn"
-                style={{ backgroundColor:"rgba(125, 48, 48, 0.811)" }}
+                style={{ backgroundColor: "rgba(125, 48, 48, 0.811)" }}
                 onClick={() => {
                   alert("This product is already in your cart.");
                 }}
@@ -80,8 +95,6 @@ const ProductDetails = () => {
                 Add to Cart
               </button>
             )}
-
-            <p>Description: {product.description}</p>
 
             <div className="comments-section">
               <div className="comments-header">

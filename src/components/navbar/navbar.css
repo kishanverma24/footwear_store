@@ -265,3 +265,17 @@
     display: none;
   }
 }
+@media (max-width: 400px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .container1 {
+    margin-left: 5px;
+  }
+  .hamburger-lines {
+    padding-right: 5px;
+  }
+}

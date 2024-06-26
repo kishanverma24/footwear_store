@@ -37,3 +37,14 @@
 .sm_div p {
   margin-bottom: 10px;
 }
+
+@media (max-width: 350px) {
+  .main_div {
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .sm_div {
+    box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0);
+  }
+}

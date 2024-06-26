@@ -34,7 +34,7 @@
 
 .container .col .card__side--front {
   filter: contrast(80%);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
@@ -54,6 +54,8 @@
 .container .col .card__side--back {
   background-color: #f7f7f7;
   transform: rotateY(180deg);
+  background-size: contain;
+
 }
 .container .col .card__side--back .frame {
   border: solid 1px rgba(34, 34, 34, 0.5);
@@ -125,5 +127,20 @@
     background-color: #f7f7f7b0;
     border: none;
     box-shadow: inset 1px 1px 1px #22222220;
+  }
+}
+@media (max-width: 350px) {
+  .container {
+    gap: 40px;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .container .col .card {
+    max-width: 400px;
+  height: 100%;
   }
 }

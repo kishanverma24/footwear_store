@@ -53,3 +53,24 @@
 .pro-text h6:hover {
   text-decoration: underline;
 }
+@media (max-width: 350px) {
+  .pro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .pro-img {
+    width: 80px;
+    height: 80px;
+  }
+  .pro-text > h3 {
+    font-size: large;
+    font-weight: bolder;
+  }
+  .pro-text > h6 {
+    font-size: smaller;
+    font-weight: lighter;
+  }
+}
