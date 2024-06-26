@@ -41,24 +41,18 @@ function CategoryComponent() {
       id: "5",
     },
   ];
+
   return (
-    <>
-      {" "}
-      <div>
-        <div className="container">
-          {categories.map((category, index) => {
-            return (
-              <NavLink
-                key={index}
-                to={`/category/${category.title.toLowerCase()}`}
-              >
-                <CategoryCard key={index} category={category} />
-              </NavLink>
-            );
-          })}
-        </div>
-      </div>
-    </>
+    <div className="container">
+      {categories.map((category) => (
+        <NavLink
+          key={category.id}
+          to={`/category/${category.title.toLowerCase()}`}
+        >
+          <CategoryCard category={category} />
+        </NavLink>
+      ))}
+    </div>
   );
 }
 
