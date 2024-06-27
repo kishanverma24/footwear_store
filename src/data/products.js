@@ -18,7 +18,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 122021,
+    productId: 1226666,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -43,7 +43,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 122211,
+    productId: 122222,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -68,7 +68,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 120211,
+    productId: 525475,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -92,7 +92,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 122021,
+    productId: 752311,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -116,7 +116,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 771625,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -140,7 +140,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 6644535,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -164,7 +164,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 927364,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -188,7 +188,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12920211,
+    productId: 211435,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -213,7 +213,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 1220291,
+    productId: 102910,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -238,7 +238,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 1228211,
+    productId: 32282012,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -262,7 +262,7 @@ export const products = [
 
     vendorId: 1000,
 
-    productId: 12202911,
+    productId: 2202009,
 
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -286,7 +286,7 @@ export const products = [
   
     vendorId: 1000,
   
-    productId: 12202911,
+    productId: 21202929,
   
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -313,7 +313,7 @@ export const products = [
   
     vendorId: 1000,
   
-    productId: 12202911,
+    productId: 122001,
   
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -340,7 +340,7 @@ export const products = [
   
     vendorId: 1000,
   
-    productId: 12202911,
+    productId: 12342911,
   
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -368,7 +368,7 @@ export const products = [
   
     vendorId: 1000,
   
-    productId: 12202911,
+    productId: 11202911,
   
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",
@@ -393,7 +393,7 @@ export const products = [
   
     vendorId: 1000,
   
-    productId: 12202911,
+    productId: 122029,
   
     description:
       "The best dog bones of all time. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.",

@@ -3,7 +3,7 @@ import "./productDetails.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 import { products } from "../../data/products.js";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { CartContext } from "../../context/Cart.jsx";
 
 const ProductDetails = () => {
@@ -49,34 +49,21 @@ const ProductDetails = () => {
                 style={{ width: "50%", display: "block", margin: "0 auto" }}
               />
             </div>
-            <div
-              className="productdetailsSubbies"
-              style={{ display: "flex", justifyContent: "space-evenly" }}
-            >
+            <div className="productdetailsSubbies">
               <p>Name: {product.name}</p>
+              <p>Product Id: {product.productId} </p>
             </div>
-            <div
-              className="productdetailsSubbies"
-              style={{ display: "flex", justifyContent: "space-evenly" }}
-            >
+            <div className="productdetailsSubbies">
               <p>Price: {product.price}</p>
 
               <p>Brand name: {product.brandName}</p>
             </div>
-            <div
-              className="productdetailsSubbies"
-              style={{ display: "flex", justifyContent: "space-evenly" }}
-            >
+            <div className="productdetailsSubbies">
               <p>isAvailable: {product.isAvailable} </p>
-              {/* <p>ForMen: {product.forMen}</p> */}
             </div>
-            <div
-              className="productdetailsSubbies"
-              style={{ display: "flex", justifyContent: "space-evenly" }}
-            >
+            <div className="productdetailsSubbies">
               <p>Vendor Name: {product.vendorName} </p>
               <p>Vendor Id : {product.vendorId} </p>
-              <p>Product Id: {product.productId} </p>
             </div>
             <p className="productdesc">Description: {product.description}</p>
 
@@ -84,11 +71,13 @@ const ProductDetails = () => {
               <button
                 className="btn"
                 style={{ backgroundColor: "rgba(125, 48, 48, 0.811)" }}
-                onClick={() => {
-                  alert("This product is already in your cart.");
-                }}
+                // onClick={() => {
+                //   alert("This product is already in your cart.");
+                // }}
               >
-                Already in Cart
+                <NavLink to={"/cart"} style={{ color: "white" }}>
+                  Already in Cart
+                </NavLink>
               </button>
             ) : (
               <button className="btn" onClick={addCartItem}>
